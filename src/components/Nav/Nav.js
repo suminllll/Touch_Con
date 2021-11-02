@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Theme from '../../styles/Theme';
 
 const Nav = () => {
+  const [login, setLogin] = useState(false);
+
+  const changLog = e => {
+    setLogin(!login);
+  };
   return (
     <Top>
       <OverWrap>
@@ -12,7 +17,12 @@ const Nav = () => {
       <OverWrapRight>
         <Text>
           <LogoutImg alt="logoutImg" src="/images/Vector.png" />
-          <WorkSpan>로그아웃</WorkSpan>
+          <LoginButton onClick={changLog} changeLogin={login}>
+            로그인
+          </LoginButton>
+          <LogoutButton onClick={changLog} changeLogin={login}>
+            로그아웃
+          </LogoutButton>
         </Text>
         <Rectangle_9></Rectangle_9>
         <Rectangle_8></Rectangle_8>
@@ -75,9 +85,22 @@ const LogoutImg = styled.img`
   margin-right: 5px;
 `;
 
-const WorkSpan = styled.span`
+const ButtonStyle = styled.button`
   margin-right: 50px;
   color: white;
+  background-color: transparent;
+  border-style: none;
   font-size: 23px;
   font-weight: bold;
+`;
+const LoginButton = styled(ButtonStyle)`
+  ${({ changeLogin }) => {
+    return changeLogin ? `display:none` : `display:block`;
+  }}
+`;
+
+const LogoutButton = styled(ButtonStyle)`
+  ${({ changeLogin }) => {
+    return changeLogin ? `display:block` : `display:none`;
+  }}
 `;
