@@ -1,9 +1,8 @@
-import { render } from '@testing-library/react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import React from 'react';
 import styled from 'styled-components';
 
-const Menu = () => {
+const Menu = props => {
   const [isOpen, setIsOpen] = useState({
     RewardList: false,
     PointList: false,
@@ -11,18 +10,10 @@ const Menu = () => {
     AdminList: false,
   });
 
-  const [clickList, setClickList] = useState('black');
-
   const toggleNav = e => {
     setIsOpen({ [e.target.name]: !isOpen[e.target.name] });
   };
 
-  const changeColorList = () => {
-    setClickList(clickList => '#0068d9');
-    console.log(clickList);
-  };
-
-  render();
   return (
     <Aside>
       <Ul>
@@ -36,7 +27,7 @@ const Menu = () => {
             name="RewardList"
           />
           <ul className={isOpen.RewardList ? 'active' : 'hide'}>
-            <li onClick={changeColorList}>생성내역</li>
+            <li>생성내역</li>
             <li>전송내역</li>
             <li>리워드콘 발행</li>
             <li>리워드콘 보관</li>
@@ -70,7 +61,7 @@ const Menu = () => {
             onClick={toggleNav}
           />
           <ul className={isOpen.PublishList ? 'active' : 'hide'}>
-            <li onClick={changeColorList}>터치포인트</li>
+            <li>터치포인트</li>
             <li>리워드콘</li>
           </ul>
         </PublishList>
@@ -93,15 +84,17 @@ const Menu = () => {
   );
 };
 
-const Aside = styled.div`
-  width: 300px;
+const Aside = styled.section`
+  position: fixed;
+  z-index: 9999;
+  height: 100%;
+  left: 0;
   margin-top: 80px; //nav 오면 지울것.
   background-color: #f6f6f6;
 `;
 
 const Ul = styled.ul`
   margin: 30px;
-  padding-top: 30px;
   cursor: pointer;
 `;
 
