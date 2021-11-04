@@ -35,8 +35,9 @@ export default Nav;
 
 const Top = styled.nav`
   display: flex;
-  position: fixed;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
   height: 80px;
   width: 100%;
   background-color: ${({ theme }) => theme.orange};
