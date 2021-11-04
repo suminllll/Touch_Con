@@ -1,23 +1,25 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Radio from '../../components/Radio/Radio';
 
 const Login = () => {
-  const [radio, setRadio] = useState(false);
+  const [inputStatus, setInputStatus] = useState({
+    text: '',
+    name: '',
+  });
 
-  const changeRadio = e => {
-    setRadio(!radio);
-    console.log(radio);
+  const handleClickButton = buttonId => {
+    setInputStatus(buttonId);
   };
 
   return (
     <Section>
       <Article>
-        <ButtonBox>
-          <AdminButton onClick={changeRadio} radio={radio} />
-          <AdminText>관리자</AdminText>
-          <AdminButton onClick={changeRadio} radio={radio} />
-          <AdminText>기업</AdminText>
-        </ButtonBox>
+        <Radio Text="관리자" name="first" onClick={handleClickButton} />
+        <AdminText>
+          <Radio />
+          기업
+        </AdminText>
 
         <LoginWrapper>
           <IdTextBox>
@@ -49,51 +51,26 @@ const Article = styled.article`
   height: 200px;
   width: 497px;
   left: 50%;
+  padding: 20px;
   background-color: #f6f6f6;
   border: 1px solid lightgray;
   border-radius: 5px;
-  padding: 20px;
 `;
 
 const ButtonBox = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
+  margin-top: 10px;
   margin-bottom: 20px;
 `;
 
-const AdminButton = styled.input.attrs({
-  type: 'radio',
-})`
-  margin-right: 8px;
-  -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  outline: none;
-  border: 2px solid orange;
-  /* background-color: orange; */
-
-  /* input[type='radio']:before {
-    content: ‘’;
-    display: block;
-    width: 60%;
-    height: 60%;
-    margin: 20% auto;
-    border-radius: 50%;
-  }*/
-
-  /* background-color: ${({ radio }) => (radio ? ` orange` : `white`)}; */
-  ${({ radio }) => {
-    return radio ? `background-color: orange` : `background-color: white`;
-  }}
-`;
-
 const AdminText = styled.label`
+  display: flex;
+  align-items: center;
   margin-right: 30px;
-  padding-top: 4px;
   font-weight: bold;
   font-size: 13px;
+  line-height: 18px;
 `;
 
 const LoginWrapper = styled.form`
