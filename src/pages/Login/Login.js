@@ -42,11 +42,7 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
-  align-self: center;
-  text-align: center;
-  margin: 0 auto;
-  /* transform: translate(-50%, -50%); */
+  height: 100vh;
 `;
 
 const Article = styled.article`
@@ -93,8 +89,9 @@ const AdminButton = styled.input.attrs({
   }}
 `;
 
-const AdminText = styled.div`
+const AdminText = styled.label`
   margin-right: 30px;
+  padding-top: 4px;
   font-weight: bold;
   font-size: 13px;
 `;

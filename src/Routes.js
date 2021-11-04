@@ -8,9 +8,9 @@ import SignUp from './pages/Login/SignUp';
 const Routes = () => {
   return (
     <Router>
+      <Nav />
+      <Menu />
       <Switch>
-        <Nav />
-        <Menu />
         <Route exact path="/login" component={Login} />
         <Route exact path="/SignUp" component={SignUp} />
       </Switch>
