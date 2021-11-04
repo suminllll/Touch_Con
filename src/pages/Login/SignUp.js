@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SingUp = () => {
+const SignUp = () => {
   return <div></div>;
 };
 
-export default SingUp;
+export default SignUp;

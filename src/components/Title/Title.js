@@ -26,7 +26,7 @@ const Section = styled.section`
   flex-direction: column;
   align-items: center;
   height: 37px;
-  margin-top: 50px;
+  margin-top: 120px;
 `;
 
 const Article = styled.article`
