@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Radio = () => {
+const Radio = props => {
+  const { name, onClick, text } = props;
   return (
     <ButtonBox>
       <AdminText>
@@ -14,7 +15,7 @@ const Radio = () => {
 
 export default Radio;
 
-const ButtonBox = styled.span`
+const ButtonBox = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 10px;
