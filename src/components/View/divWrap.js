@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IhRewardCon = () => {
+const divWrap = ({ children, style }) => {
   return (
     <div
       style={{
@@ -9,9 +9,9 @@ const IhRewardCon = () => {
         marginTop: 80,
       }}
     >
-      리워드콘 페이지
+      {children}
     </div>
   );
 };
 
-export default IhRewardCon;
+export default divWrap;

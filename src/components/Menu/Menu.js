@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Menu = props => {
   const [isOpen, setIsOpen] = useState({
@@ -27,11 +28,21 @@ const Menu = props => {
             name="RewardList"
           />
           <ul className={isOpen.RewardList ? 'active' : 'hide'}>
-            <li>생성내역</li>
-            <li>전송내역</li>
-            <li>리워드콘 발행</li>
-            <li>리워드콘 보관</li>
-            <li>리워드콘 관리</li>
+            <li>
+              <Link to="/RewardCh">생성내역</Link>
+            </li>
+            <li>
+              <Link to="/RewardTh">전송내역</Link>
+            </li>
+            <li>
+              <Link to="/RewardPublish">리워드콘 발행</Link>
+            </li>
+            <li>
+              <Link to="/RewardKeep">리워드콘 보관</Link>
+            </li>
+            <li>
+              <Link to="/RewardManagement">리워드콘 관리</Link>
+            </li>
           </ul>
         </RewardList>
         <PointList>
@@ -46,7 +57,9 @@ const Menu = props => {
             name="PointList"
           />
           <ul className={isOpen.PointList ? 'active' : 'hide'}>
-            <li>터치포인트관리</li>
+            <li>
+              <Link to="/TpManagement">터치포인트관리</Link>
+            </li>
           </ul>
         </PointList>
         <PublishList>
@@ -61,8 +74,12 @@ const Menu = props => {
             onClick={toggleNav}
           />
           <ul className={isOpen.PublishList ? 'active' : 'hide'}>
-            <li>터치포인트</li>
-            <li>리워드콘</li>
+            <li>
+              <Link to="/IhTouchPoint">터치포인트</Link>
+            </li>
+            <li>
+              <Link to="/IhRewardCon">리워드콘</Link>
+            </li>
           </ul>
         </PublishList>
         <AdminList>
@@ -74,9 +91,15 @@ const Menu = props => {
             name="AdminList"
           />
           <ul className={isOpen.AdminList ? 'active' : 'hide'}>
-            <li>신청서류내역</li>
-            <li>포인트 배정</li>
-            <li>공지사항</li>
+            <li>
+              <Link to="/AppDocDetail">신청서류내역</Link>
+            </li>
+            <li>
+              <Link to="/PointAllocation">포인트 배정</Link>
+            </li>
+            <li>
+              <Link to="/Notice">공지사항</Link>
+            </li>
           </ul>
         </AdminList>
       </Ul>
