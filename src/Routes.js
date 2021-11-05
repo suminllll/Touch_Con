@@ -5,7 +5,7 @@ import Menu from './components/Menu/Menu';
 import Login from './pages/Login/Login';
 import SignUp from './pages/Login/SignUp';
 import History from './components/History/History';
-import RewardPublish from './pages/RewardPublish';
+import RewardPublish from './pages/RewordCon/RewardPublish';
 
 const Routes = () => {
   return (
