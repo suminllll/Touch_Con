@@ -23,6 +23,7 @@ const Routes = () => {
       <Nav />
       <Menu />
       <Switch>
+        <Route exact path="/history" component={History} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/SignUp" component={SignUp} />
         {/* 리워드 콘 폴더 */}

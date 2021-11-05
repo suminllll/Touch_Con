@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const HistoryList = ({ headNumber, contents, number, day }) => {
+const HistoryList = ({ page, headNumber, contents, number, day }) => {
   return (
     <tbody>
       <BodyTr>
+        <div />
         <BodyTd>{headNumber}</BodyTd>
         <BodyTd>{contents}</BodyTd>
         <BodyTd>{number}</BodyTd>
