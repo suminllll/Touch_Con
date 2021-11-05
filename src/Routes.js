@@ -13,9 +13,9 @@ import History from './components/History/History';
 const Routes = () => {
   return (
     <Router>
+      <Nav />
+      <Menu />
       <Switch>
-        <Nav />
-        <Menu />
         <Route exact path="/login" component={Login} />
         <Route exact path="/SignUp" component={SignUp} />
       </Switch>
