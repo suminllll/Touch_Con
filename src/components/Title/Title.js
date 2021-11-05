@@ -21,6 +21,7 @@ const Title = props => {
 
 export default Title;
 
+const Main = styled.main``;
 const Section = styled.section`
   display: flex;
   flex-direction: column;
