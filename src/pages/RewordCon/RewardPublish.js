@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Title from '../components/Title/Title';
-import Radio from '../components/Radio/Radio';
+import Title from '../../components/Title/Title';
+import Radio from '../../components/Radio/Radio';
 
 const RewardPublish = () => {
   const [inputStatus, setInputStatus] = useState({
