@@ -21,19 +21,18 @@ const Title = props => {
 
 export default Title;
 
-const Main = styled.main``;
 const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 37px;
-  margin-top: 120px;
+  margin-left: 320px;
 `;
 
 const Article = styled.article`
   display: flex;
   justify-content: space-between;
-  width: 1032px;
+  margin-top: 130px;
+  min-width: 75vw;
   min-height: 37px;
   border-bottom: 4px solid #fd7f36;
 `;

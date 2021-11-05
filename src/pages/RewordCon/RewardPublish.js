@@ -58,7 +58,7 @@ const RewardPublish = () => {
             <TitleBox>전송일</TitleBox>
             <MiddleWrap>
               <CalendarBox>
-                20-07-22 - 21-07-22
+                <CalendarDiv>20-07-22 - 21-07-22</CalendarDiv>
                 <ArrowButton>
                   <ArrowImg alt="allow" src="/images/Polygon1.png" />
                 </ArrowButton>
@@ -81,6 +81,7 @@ const RewardPublish = () => {
           <Ul>
             <TitleBox>사진업로드</TitleBox>
             <PhotoInputBox />
+
             <File>파일찾기</File>
           </Ul>
           <Ul>
@@ -112,11 +113,11 @@ const InputBox = styled.input`
 const Main = styled.main`
   display: flex;
   justify-content: center;
+  margin-left: 310px;
 `;
 
 const Section = styled.section`
-  //메뉴만큼 left 300줌
-  margin: 50px 0 0 0px;
+  margin: 40px 0 0 0;
 `;
 
 const Ul = styled.ul`
@@ -131,14 +132,14 @@ const Ul = styled.ul`
 `;
 
 const TitleBox = styled.li`
-  margin-right: 50px;
+  margin-right: 40px;
   font-weight: 800;
   font-size: 15px;
   letter-spacing: 1px;
 `;
 
 const TitleInputBox = styled(InputBox)`
-  width: 550px;
+  min-width: 45vw;
 `;
 
 const MiddleWrap = styled.div`
@@ -148,89 +149,60 @@ const MiddleWrap = styled.div`
 `;
 
 const Won = styled.span`
-  margin: 0 20px;
+  margin-right: 25px;
   color: ${({ theme }) => theme.orange};
   font-weight: bold;
 `;
 
 const InputPlaceholder = styled(InputBox)`
-  width: 430px;
+  width: 38vw;
 
   &::placeholder {
     padding-left: 15px;
     color: lightgray;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
   }
 `;
 
 const CalendarBox = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding: 6px 2px 6px 8px;
+  align-items: center;
+  text-align: center;
+  margin-right: 15px;
   background-color: #e5e5e5;
   border-radius: 3px;
-  font-size: 16px;
-  line-height: 18px;
+`;
+
+const CalendarDiv = styled.div`
+  padding: 8px 0px 4px 8px;
+  min-width: 12vw;
+  font-size: 17px;
+  letter-spacing: 0.8px;
 `;
 
 const ArrowButton = styled.button`
   background-color: transparent;
-  margin-left: 3px;
   border-style: none;
+  margin-top: 4px;
+  margin-right: 5px;
 `;
 
 const ArrowImg = styled.img`
-  height: 8px;
-  width: 8px;
+  height: 9px;
+  width: 9px;
   color: lightgray;
   object-fit: cover;
 `;
 
 const RadioWrapper = styled.div`
   display: flex;
-  padding-top: 8px;
+  padding-top: 11px;
   margin-left: 15px;
-  margin-right: -5px;
 `;
-// const SendButtonBox = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin-top: 15px;
-//   margin-bottom: 20px;
-//   margin-left: 10px;
-// `;
-
-// const SendButton = styled.input.attrs({
-//   type: 'radio',
-// })`
-//   margin-right: 8px;
-
-//   -webkit-appearance: none;
-//   width: 18px;
-//   height: 18px;
-//   border-radius: 50%;
-//   outline: none;
-//   border: 2px solid orange;
-//   /* ${({ radio }) => {
-//     return radio ? `background-color: orange` : `background-color: white`;
-//   }} */
-
-//   &:checked:before {
-//     background-color: ${({ theme }) => theme.orange};
-//   }
-// `;
-
-// const SendText = styled.label`
-//   margin-right: 15px;
-//   padding-top: 5px;
-//   font-weight: 800;
-//   font-size: 13px;
-//   letter-spacing: 0.5px;
-// `;
 
 const PhotoInputBox = styled(InputBox)`
-  width: 400px;
+  width: 34vw;
+  margin-right: -10px;
 `;
 
 const File = styled.button`
@@ -242,7 +214,7 @@ const File = styled.button`
 `;
 
 const LastInputBox = styled(InputBox)`
-  width: 507px;
+  width: 41.3vw;
   height: 124px;
 `;
 
@@ -252,9 +224,7 @@ const RightWrapper = styled.aside`
   justify-content: center;
   align-items: center;
   margin-top: 40px;
-  padding-left: 70px;
-  width: 300px;
-  height: 350px;
+  padding-left: 90px;
 `;
 
 const QrBox = styled.div`
@@ -262,14 +232,14 @@ const QrBox = styled.div`
 `;
 
 const Qr = styled.img`
-  width: 133px;
-  height: 130px;
+  width: 9vw;
+  height: 9vw;
   object-fit: cover;
 `;
 
 const PublishButton = styled.button`
   height: 40px;
-  width: 193px;
+  width: 14vw;
   margin-top: 30px;
   color: white;
   background-color: ${({ theme }) => theme.orange};
