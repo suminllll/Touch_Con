@@ -6,6 +6,7 @@ const Radio = () => {
     <ButtonBox>
       <AdminText>
         <AdminButton name={name} onClick={onClick} />
+        {text}
       </AdminText>
     </ButtonBox>
   );
@@ -13,7 +14,7 @@ const Radio = () => {
 
 export default Radio;
 
-const ButtonBox = styled.div`
+const ButtonBox = styled.span`
   display: flex;
   justify-content: center;
   margin-top: 10px;
