@@ -1,5 +1,9 @@
 import React from 'react';
-import divWrap from '../../components/View/divWrap';
+import Title from '../../components/Title/Title';
+import { TtileInput } from '../../components/Input/Inputs';
+import { SendDate } from '../../components/Select/SendDate';
+import DatePicker from 'react-datepicker';
+import { Btn1 } from '../../components/button/buttons';
 
 const RewardCh = () => {
   return (
@@ -10,7 +14,21 @@ const RewardCh = () => {
         marginTop: 80,
       }}
     >
-      생성내역페이지
+      <Title titleText={'생성내역'} categoryText={'리워드콘 > 생성내역'} />
+
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}
+      >
+        <div>
+          <TtileInput />
+          <SendDate />
+        </div>
+        <Btn1 text={'검색'} style={{ marginLeft: 145, marginTop: 70 }} />
+      </div>
     </div>
   );
 };
