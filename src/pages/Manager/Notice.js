@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Notice = () => {
-  return <div>공지사항</div>;
+  return <div />;
 };
 
 export default Notice;

@@ -3,23 +3,26 @@ import styled from 'styled-components';
 import Radio from '../../components/Radio/Radio';
 
 const Login = () => {
-  const [inputStatus, setInputStatus] = useState({
-    admin: '',
-    company: '',
-  });
+  const [inputStatus, setInputStatus] = useState(false);
 
-  const { admin, company } = inputStatus;
-
-  const handleClickButton = buttonId => {
-    setInputStatus(buttonId);
+  const handleClickAdmin = () => {
+    setInputStatus(!inputStatus);
   };
 
   return (
     <Form>
       <Article>
         <AdminText>
-          <Radio name="admin" onClick={handleClickButton} text="관리자" />
-          <Radio name="company" onClick={handleClickButton} text="기업" />
+          <Radio
+            click={!inputStatus}
+            handleClickAdmin={handleClickAdmin}
+            text="관리자"
+          />
+          <Radio
+            click={inputStatus}
+            handleClickAdmin={handleClickAdmin}
+            text="기업"
+          />
         </AdminText>
 
         <LoginWrapper>
@@ -28,8 +31,8 @@ const Login = () => {
             <div>비밀번호</div>
           </IdTextBox>
           <InputWrap>
-            <LoginInputBox></LoginInputBox>
-            <LoginInputBox></LoginInputBox>
+            <LoginInputBox />
+            <LoginInputBox />
             <ChangeBox>기업회원가입</ChangeBox>
           </InputWrap>
           <LoginButton>로그인</LoginButton>

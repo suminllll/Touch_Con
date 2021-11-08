@@ -2,11 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Radio = props => {
-  const { name, onClick, text } = props;
+  const { handleClickAdmin, click, text } = props;
+
   return (
     <ButtonBox>
       <AdminText>
-        <AdminButton name={name} onClick={onClick} />
+        <NomalImg
+          onClick={handleClickAdmin}
+          alt="nomalImg"
+          src="/images/비활성화.png"
+          show={click}
+        />
+        <ChangedImg
+          onClick={handleClickAdmin}
+          alt="changedImg"
+          src="/images/활성화.png"
+          show={click}
+        />
+
         {text}
       </AdminText>
     </ButtonBox>
@@ -31,15 +44,21 @@ const AdminText = styled.label`
   line-height: 18px;
 `;
 
-const AdminButton = styled.input.attrs({
-  type: 'radio',
-})`
+const ChangeImg = styled.img`
   margin: 0 8px 0 0;
-  -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   background-color: white;
-  border-radius: 50%;
-  outline: none;
-  border: 2px solid orange;
+`;
+
+const NomalImg = styled(ChangeImg)`
+  ${({ show }) => {
+    return show ? `display:none` : `display:block`;
+  }}
+`;
+
+const ChangedImg = styled(ChangeImg)`
+  ${({ show }) => {
+    return show ? `display:block` : `display:none`;
+  }}
 `;
