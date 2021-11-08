@@ -21,3 +21,27 @@ export const Btn1 = props => {
     </div>
   );
 };
+
+export const Btn2 = props => {
+  const { text, style } = props;
+
+  console.log(text);
+
+  return (
+    <div>
+      <button
+        style={{
+          minWidth: 139,
+          minHeight: 40,
+          backgroundColor: '#FD7F36',
+          borderRadius: 5,
+          color: 'white',
+          fontSize: 18,
+          ...style,
+        }}
+      >
+        {text}
+      </button>
+    </div>
+  );
+};
