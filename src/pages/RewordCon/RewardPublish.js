@@ -4,26 +4,10 @@ import Title from '../../components/Title/Title';
 import Radio from '../../components/Radio/Radio';
 
 const RewardPublish = () => {
-  const [inputStatus, setInputStatus] = useState({
-    first: null,
-    second: null,
-    third: null,
-  });
-  const { first, second, third } = inputStatus;
+  const [inputStatus, setInputStatus] = useState(false);
 
-  const handleClickButton = e => {
-    const { name, value } = e.target;
-    console.log(name, value);
-    setInputStatus({ ...inputStatus, [name]: value });
-    console.log([name]);
-    // console.log(e.currentTarget.innerText);
-    // console.log(e.target.name);
-    // const test = e.target.name;
-    // for (let i in select) {
-    //   i === test ? setSelect(select => true) : setSelect(select => false);
-    // }
-    // console.log(select.test);
-    // setSelect(!select);
+  const handleClickButton = () => {
+    setInputStatus(!inputStatus);
   };
 
   return (
@@ -44,7 +28,6 @@ const RewardPublish = () => {
               <Won>50,000</Won>
               <TitleBox>(touch/point)</TitleBox>
             </MiddleWrap>
-            <></>
           </Ul>
           <Ul>
             <TitleBox>배분할 터치포인트 수량</TitleBox>
@@ -65,16 +48,20 @@ const RewardPublish = () => {
               </CalendarBox>
               <RadioWrapper>
                 <Radio
-                  name="first"
-                  onClick={handleClickButton}
+                  handleClickAdmin={handleClickButton}
+                  click={!inputStatus}
                   text="개별발송(준비중)"
                 />
                 <Radio
-                  name="second"
-                  onClick={handleClickButton}
+                  handleClickAdmin={handleClickButton}
+                  click={inputStatus}
                   text="대량발송(준비중)"
                 />
-                <Radio name="third" onClick={handleClickButton} text="보관" />
+                <Radio
+                  handleClickAdmin={handleClickButton}
+                  click={inputStatus}
+                  text="보관"
+                />
               </RadioWrapper>
             </MiddleWrap>
           </Ul>
