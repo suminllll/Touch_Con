@@ -6,22 +6,22 @@ import Title from '../../components/Title/Title';
 
 const IhTouchPoint = () => {
   return (
-    <div
-      style={{
-        flex: 1,
-        marginLeft: 300,
-        marginTop: 80,
-      }}
-    >
+    <>
       <Title
-        titleText={'터치포인트관리'}
-        categoryText={'터치포인트 > 터치포인트관리'}
+        titleText="터치포인트관리"
+        categoryText="터치포인트 > 터치포인트관리"
       />
-
-      <TextBox />
-      <TcPointBox />
-      <MtHistory style={{ marginLeft: 170, marginTop: 93 }} />
-    </div>
+      <div
+        style={{
+          flex: 1,
+          marginLeft: 170,
+        }}
+      >
+        <TextBox />
+        <TcPointBox />
+        <MtHistory style={{ marginLeft: 170, marginTop: 93 }} />
+      </div>
+    </>
   );
 };
 

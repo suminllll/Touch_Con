@@ -12,6 +12,7 @@ import RewardManagement from './pages/RewordCon/RewardManagement';
 import RewardTh from './pages/RewordCon/RewardTh';
 import AppDocDetail from './pages/Manager/AppDocDetail';
 import Notice from './pages/Manager/Notice';
+import NoticeRegister from './pages/Manager/NoticeRegister';
 import PointAllocation from './pages/Manager/PointAllocation';
 import TpManagement from './pages/TouchPoint/TpManagement';
 import IhRewardCon from './pages/IssueHistory/IhRewardCon';
@@ -39,6 +40,7 @@ const Routes = () => {
         {/* 관리자 페이지 */}
         <Route exact path="/AppDocDetail" component={AppDocDetail} />
         <Route exact path="/Notice" component={Notice} />
+        <Route exact path="/NoticeRegister" component={NoticeRegister} />
         <Route exact path="/PointAllocation" component={PointAllocation} />
       </Switch>
     </Router>

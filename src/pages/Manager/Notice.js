@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import AdminBtn from '../../components/AdminBtn/AdminBtn';
 import Title from '../../components/Title/Title';
 import History from '../../components/History/History';
+import { Link } from 'react-router-dom';
 
 const Notice = () => {
-  const goToLink = () => {};
   return (
     <>
       <Title titleText="공지사항" categoryText="관리자 페이지 > 공지사항" />
@@ -38,7 +38,9 @@ const Notice = () => {
           <History />
         </HistoryWrap>
         <BottomBox>
-          <AdminBtn onClick={goToLink} btnName="공지등록" color="#fd7f36" />
+          <Link to="/NoticeRegister">
+            <AdminBtn btnName="공지등록" color="#fd7f36" />
+          </Link>
         </BottomBox>
       </Article>
     </>
