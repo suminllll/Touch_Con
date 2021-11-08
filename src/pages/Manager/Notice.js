@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import AdminBtn from '../../components/AdminBtn/AdminBtn';
 import Title from '../../components/Title/Title';
 import History from '../../components/History/History';
+import { Link } from 'react-router-dom';
 
 const Notice = () => {
   return (
@@ -37,7 +38,9 @@ const Notice = () => {
           <History />
         </HistoryWrap>
         <BottomBox>
-          <AdminBtn btnName="공지등록" color="#fd7f36" />
+          <Link to="/NoticeRegister">
+            <AdminBtn btnName="공지등록" color="#fd7f36" />
+          </Link>
         </BottomBox>
       </Article>
     </>

@@ -6,19 +6,19 @@ import RcHistory from '../../components/History/RcHistory';
 
 const IhRewardCon = () => {
   return (
-    <div
-      style={{
-        flex: 1,
-        marginLeft: 300,
-        marginTop: 80,
-      }}
-    >
-      <Title titleText={'리워드콘'} categoryText={'발행내역 > 리워드콘'} />
-
-      <TextBox />
-      <TcPointBox />
-      <RcHistory style={{ marginLeft: 170, marginTop: 93 }} />
-    </div>
+    <>
+      <Title titleText="리워드콘" categoryText="발행내역 > 리워드콘" />
+      <div
+        style={{
+          flex: 1,
+          marginLeft: 170,
+        }}
+      >
+        <TextBox />
+        <TcPointBox />
+        <RcHistory style={{ marginLeft: 170, marginTop: 93 }} />
+      </div>
+    </>
   );
 };
 

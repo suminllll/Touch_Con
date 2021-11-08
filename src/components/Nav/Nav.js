@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Theme from '../../styles/Theme';
 
 const Nav = () => {
   const [login, setLogin] = useState(false);
@@ -24,8 +23,8 @@ const Nav = () => {
             로그아웃
           </LogoutButton>
         </Text>
-        <Rectangle_9></Rectangle_9>
-        <Rectangle_8></Rectangle_8>
+        <Rectangle_9 />
+        <Rectangle_8 />
       </OverWrapRight>
     </Top>
   );
@@ -57,8 +56,6 @@ const LogoImg = styled.img`
 
 const OverWrapRight = styled.div`
   display: flex;
-  justify-content: right;
-  width: 1140px;
 `;
 
 const Rectangle_8 = styled.div`

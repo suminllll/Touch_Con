@@ -7,30 +7,30 @@ import Title from '../../components/Title/Title';
 
 const RewardTh = () => {
   return (
-    <div
-      style={{
-        flex: 1,
-        marginLeft: 300,
-        marginTop: 80,
-      }}
-    >
-      <Title titleText={'전송내역'} categoryText={'리워드콘 > 전송내역'} />
-
+    <>
+      <Title titleText="전송내역" categoryText="리워드콘 > 전송내역" />
       <div
         style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
+          flex: 1,
+          marginLeft: 170,
         }}
       >
-        <div>
-          <TtileInput />
-          <SendDate />
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}
+        >
+          <div>
+            <TtileInput />
+            <SendDate />
+          </div>
+          <Btn1 text="검색" style={{ marginLeft: 145, marginTop: 70 }} />
         </div>
-        <Btn1 text={'검색'} style={{ marginLeft: 145, marginTop: 70 }} />
+        <History style={{ marginLeft: 190, marginTop: 93 }} />
       </div>
-      <History style={{ marginLeft: 218, marginTop: 93 }} />
-    </div>
+    </>
   );
 };
 

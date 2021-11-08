@@ -5,7 +5,7 @@ import Title from '../../components/Title/Title';
 
 const NoticeRegister = () => {
   return (
-    <section>
+    <>
       <Title
         titleText="공지사항 등록"
         categoryText="관리자 페이지 > 공지사항 > 공지사항 등록"
@@ -32,7 +32,7 @@ const NoticeRegister = () => {
           </ButtonBox>
         </ButtonWrap>
       </Article>
-    </section>
+    </>
   );
 };
 
