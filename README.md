@@ -11,10 +11,6 @@
 ### 빨간 네모칸 부분 컴포넌트화 하였습니다.   
 ---
 
-
-
-![작업중](https://user-images.githubusercontent.com/86041167/140042707-aff095d9-e741-4d11-b8f4-2cf4d41dee61.png)
-### 레이아웃 작업완료 하였고 파란 네모 부분 기능작업중입니다.   
 ---
 ![게시판기능 작업중](https://user-images.githubusercontent.com/86041167/140043818-554a478b-7b91-4b72-ba6e-ea558f58cc0d.png)
 ### 게시판 컴포넌트화 하는중입니다.
