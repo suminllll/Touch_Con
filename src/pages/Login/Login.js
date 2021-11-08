@@ -4,21 +4,22 @@ import Radio from '../../components/Radio/Radio';
 
 const Login = () => {
   const [inputStatus, setInputStatus] = useState({
-    text: '',
-    name: '',
+    admin: '',
+    company: '',
   });
+
+  const { admin, company } = inputStatus;
 
   const handleClickButton = buttonId => {
     setInputStatus(buttonId);
   };
 
   return (
-    <Section>
+    <Form>
       <Article>
-        <Radio Text="관리자" name="first" onClick={handleClickButton} />
         <AdminText>
-          <Radio />
-          기업
+          <Radio name="admin" onClick={handleClickButton} text="관리자" />
+          <Radio name="company" onClick={handleClickButton} text="기업" />
         </AdminText>
 
         <LoginWrapper>
@@ -34,43 +35,35 @@ const Login = () => {
           <LoginButton>로그인</LoginButton>
         </LoginWrapper>
       </Article>
-    </Section>
+    </Form>
   );
 };
 
 export default Login;
 
-const Section = styled.section`
+const Form = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 105vh;
+  width: 120vw;
 `;
 
 const Article = styled.article`
-  height: 200px;
-  width: 497px;
+  height: 35vh;
+  width: 40vw;
   left: 50%;
-  padding: 20px;
+  padding-top: 50px;
   background-color: #f6f6f6;
   border: 1px solid lightgray;
-  border-radius: 5px;
+  border-radius: 7px;
 `;
 
-const ButtonBox = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
-`;
-
-const AdminText = styled.label`
+const AdminText = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 30px;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 18px;
+  justify-content: space-between;
+  margin: 0 210px 10px 170px;
 `;
 
 const LoginWrapper = styled.form`
@@ -80,16 +73,16 @@ const LoginWrapper = styled.form`
 `;
 
 const IdTextBox = styled.div`
-  letter-spacing: -0.48px;
-  font-weight: bold;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin-right: 20px;
+  margin-right: 30px;
   margin-bottom: 17px;
+  font-weight: 800;
+  font-size: 15px;
 
   div:first-child {
-    margin-bottom: 33px;
+    margin-bottom: 45px;
   }
 `;
 
@@ -103,8 +96,8 @@ const InputWrap = styled.div`
 `;
 
 const LoginInputBox = styled.input`
-  width: 180px;
-  height: 30px;
+  width: 18vw;
+  height: 5vh;
   border: 1px solid lightgray;
   border-radius: 5px;
 `;
@@ -113,17 +106,17 @@ const ChangeBox = styled.p`
   text-align: right;
   margin-top: 8px;
   color: ${({ theme }) => theme.orange};
-  font-size: 10px;
+  font-size: 11px;
   font-weight: bold;
 `;
 
 const LoginButton = styled.button`
   color: white;
   background-color: ${({ theme }) => theme.orange};
-  width: 90px;
-  height: 80px;
+  width: 8vw;
+  height: 11vh;
   margin-left: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border: 2px solid orange;
   border-radius: 5px;
   font-weight: bold;

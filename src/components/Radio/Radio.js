@@ -26,8 +26,8 @@ const AdminText = styled.label`
   display: flex;
   align-items: center;
   margin-right: 30px;
-  font-weight: bold;
-  font-size: 13px;
+  font-weight: 800;
+  font-size: 14px;
   line-height: 18px;
 `;
 
@@ -38,6 +38,7 @@ const AdminButton = styled.input.attrs({
   -webkit-appearance: none;
   width: 18px;
   height: 18px;
+  background-color: white;
   border-radius: 50%;
   outline: none;
   border: 2px solid orange;

@@ -145,7 +145,6 @@ const PointList = styled.li`
   .active {
     font-size: 23px;
     padding-left: 50px;
-
     li {
       padding-top: 20px;
     }
@@ -158,7 +157,6 @@ const PublishList = styled.li`
   .active {
     font-size: 23px;
     padding-left: 50px;
-
     li {
       padding-top: 20px;
     }
@@ -171,7 +169,6 @@ const AdminList = styled.li`
   .active {
     font-size: 23px;
     padding-left: 50px;
-
     li {
       padding-top: 20px;
     }

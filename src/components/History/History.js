@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import HistoryList from './HistoryList/HistoryList';
 import BOARD_DATA from './HistoryList/boardData';
 
-const History = ({ style }) => {
+const History = ({ Check, style }) => {
   return (
     <Container style={{ ...style }}>
       <Table>
@@ -24,6 +24,8 @@ const History = ({ style }) => {
             ></div>
             No.
           </HeadTd>
+          <CheckTd Check={Check} />
+          <HeadTd>No.</HeadTd>
           <HeadTd>내용</HeadTd>
           <HeadTd>생성갯수</HeadTd>
           <HeadTd>생성일</HeadTd>
@@ -35,6 +37,7 @@ const History = ({ style }) => {
             contents={data.contents}
             number={data.number}
             day={data.day}
+            Check={Check}
           />
         ))}
       </Table>
@@ -60,6 +63,10 @@ const HeadTr = styled.tr`
 
 const HeadTd = styled.td`
   vertical-align: middle;
+`;
+
+const CheckTd = styled(HeadTd)`
+  display: ${props => (props.Check ? '"";' : 'none;')};
 `;
 
 export default History;
