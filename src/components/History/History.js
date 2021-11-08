@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import HistoryList from './HistoryList/HistoryList';
 import BOARD_DATA from './HistoryList/boardData';
-
+// 호영님 머지
 const History = ({ style }) => {
   return (
     <Container style={{ ...style }}>
