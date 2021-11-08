@@ -1,7 +1,28 @@
 import React from 'react';
+import TcPointBox from '../../components/Box/TcPointBox';
+import TextBox from '../../components/Box/TextBox';
+import MtHistory from '../../components/History/MtHistory';
+import Title from '../../components/Title/Title';
 
 const IhTouchPoint = () => {
-  return <div>터치포인트 페이지</div>;
+  return (
+    <div
+      style={{
+        flex: 1,
+        marginLeft: 300,
+        marginTop: 80,
+      }}
+    >
+      <Title
+        titleText={'터치포인트관리'}
+        categoryText={'터치포인트 > 터치포인트관리'}
+      />
+
+      <TextBox />
+      <TcPointBox />
+      <MtHistory style={{ marginLeft: 170, marginTop: 93 }} />
+    </div>
+  );
 };
 
 export default IhTouchPoint;
