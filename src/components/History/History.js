@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import HistoryList from './HistoryList/HistoryList';
 import BOARD_DATA from './HistoryList/boardData';
-// 호영님 머지
 const History = ({ style }) => {
   return (
     <Container style={{ ...style }}>
@@ -33,8 +32,14 @@ const History = ({ style }) => {
             key={data.id}
             headNumber={data.id}
             contents={data.contents}
-            number={data.number}
-            day={data.day}
+            transferNumber={data.transferNumber}
+            days={data.days}
+            published={data.published}
+            // companyName={data.companyName}
+            // points={data.points}
+            // produced={data.produced}
+            // use={data.use}
+            // result={data.result}
           />
         ))}
       </Table>
@@ -42,20 +47,17 @@ const History = ({ style }) => {
   );
 };
 
-const Container = styled.div`
-  width: 1032px;
-`;
+const Container = styled.div``;
 
 const Table = styled.table`
-  width: 1032px;
+  width: 100%;
+  margin-right: 550px;
   text-align: center;
   border: 1px solid #dddddd;
 `;
 
 const HeadTr = styled.tr`
   background-color: #eeeeee;
-  text-align: center;
-  height: 45px;
 `;
 
 const HeadTd = styled.td`

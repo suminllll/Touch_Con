@@ -25,18 +25,20 @@ const CheckBox = () => {
 const Agree = styled.div``;
 
 const Box = styled.img`
-  position: absolute;
+  /* position: absolute;
   left: 450px;
-  bottom: 0px;
+  bottom: 0px; */
 `;
 
-const Check = styled.img``;
+const Check = styled.img`
+  position: absolute;
+`;
 
 const AgreeBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .active {
-    position: absolute;
-    bottom: 5px;
-    left: 455px;
   }
   .hide {
     display: none;

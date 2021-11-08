@@ -7,9 +7,16 @@ import { Btn1 } from '../../components/button/buttons';
 import History from '../../components/History/History';
 
 const RewardCh = () => {
+  //생성내역
   return (
-    <>
+    <div
+      style={{
+        flex: 1,
+        marginLeft: 170,
+      }}
+    >
       <Title titleText="생성내역" categoryText="리워드콘 > 생성내역" />
+
       <div
         style={{
           flex: 1,
@@ -29,9 +36,10 @@ const RewardCh = () => {
           </div>
           <Btn1 text="검색" style={{ marginLeft: 145, marginTop: 70 }} />
         </div>
-        <History style={{ marginLeft: 190, marginTop: 93 }} />
+        <Btn1 text="검색" style={{ marginLeft: 145, marginTop: 70 }} />
       </div>
-    </>
+      <History style={{ marginLeft: 218, marginTop: 93 }} />
+    </div>
   );
 };
 

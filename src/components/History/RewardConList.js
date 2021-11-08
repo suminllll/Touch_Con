@@ -1,18 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import CheckBox from '../../CheckBox/CheckBox';
+import CheckBox from '../CheckBox/CheckBox';
 
-const HistoryList = ({
+const RewardConList = ({
   Check,
+  key,
   headNumber,
   contents,
   transferNumber,
   days,
   published,
-  companyName,
-  points,
-  produced,
-  use,
   result,
 }) => {
   return (
@@ -21,16 +18,12 @@ const HistoryList = ({
         <CheckTd Check={Check}>
           <CheckBox />
         </CheckTd>
-        <BodyTd headNumber>{headNumber}</BodyTd>
-        <BodyTd contents>{contents}</BodyTd>
+        <BodyTd>{headNumber}</BodyTd>
+        <BodyTd>{contents}</BodyTd>
+        <BodyTd>{transferNumber}</BodyTd>
+        <BodyTd>{days}</BodyTd>
         <BodyTd published>{published}</BodyTd>
-        <BodyTd days>{days}</BodyTd>
-        {/* <BodyTd transferNumber>{transferNumber}</BodyTd> */}
-        {/* <BodyTd companyName>{companyName}</BodyTd> */}
-        {/* <BodyTd points>{points}</BodyTd> */}
-        {/* <BodyTd produced>{produced}</BodyTd> */}
-        {/* <BodyTd use>{use}</BodyTd> */}
-        {/* <BodyTd result>{result}</BodyTd> */}
+        <BodyTd result>{result}</BodyTd>
       </BodyTr>
     </tbody>
   );
@@ -52,4 +45,4 @@ const CheckTd = styled(BodyTd)`
   display: ${props => (props.Check ? '"";' : 'none;')};
 `;
 
-export default HistoryList;
+export default RewardConList;
