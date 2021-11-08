@@ -37,19 +37,23 @@ const Section = styled.div`
 `;
 
 const SignupCheck = styled.div`
-  position: relative;
-  top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  /* position: relative;
+  top: 400px; */
 `;
 
 const Span = styled.div`
-  position: relative;
+  /* position: relative;
   left: 480px;
-  bottom: 3px;
+  bottom: 3px; */
 `;
 
 const Button = styled.div`
   position: relative;
-  margin-top: 450px;
+  margin-top: 150px;
   display: flex;
   justify-content: space-around;
 `;

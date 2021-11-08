@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import CheckBox from '../../CheckBox/CheckBox';
 
-const HistoryList = ({ headNumber, contents, number, day }) => {
+const HistoryList = ({ Check, headNumber, contents, number, day }) => {
   return (
     <tbody>
       <BodyTr>
+        <CheckTd Check={Check}>
+          <CheckBox />
+        </CheckTd>
         <BodyTd>{headNumber}</BodyTd>
         <BodyTd>{contents}</BodyTd>
         <BodyTd>{number}</BodyTd>
@@ -19,10 +23,15 @@ const BodyTr = styled.tr`
 `;
 
 const BodyTd = styled.td`
+  position: relative;
   vertical-align: middle;
   border-bottom: 1px solid #c4c4c4;
   font-weight: 400;
   font-size: 16px;
+`;
+
+const CheckTd = styled(BodyTd)`
+  display: ${props => (props.Check ? '"";' : 'none;')};
 `;
 
 export default HistoryList;
