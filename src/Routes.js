@@ -28,7 +28,7 @@ const Routes = () => {
         {/* 리워드 콘 폴더 */}
         <Route exact path="/RewardPublish" component={RewardPublish} />
         <Route exact path="/RewardCh" component={RewardCh} />
-        <Route exact path="/RewardCKeep" component={RewardTh} />
+        <Route exact path="/RewardTh" component={RewardTh} />
         <Route exact path="/RewardManagement" component={RewardManagement} />
         <Route exact path="/RewardKeep" component={RewardKeep} />
         {/* 터치포인트 */}

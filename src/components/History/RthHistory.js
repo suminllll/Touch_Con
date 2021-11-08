@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import HistoryList from './HistoryList/HistoryList';
 import BOARD_DATA from './HistoryList/boardData';
-// 호영님 머지
-const History = ({ style }) => {
+
+const RthHistory = ({ style }) => {
   return (
     <Container style={{ ...style }}>
       <Table>
@@ -25,7 +25,8 @@ const History = ({ style }) => {
             No.
           </HeadTd>
           <HeadTd>내용</HeadTd>
-          <HeadTd>생성갯수</HeadTd>
+          <HeadTd>전송갯수</HeadTd>
+          <HeadTd>전송결과</HeadTd>
           <HeadTd>생성일</HeadTd>
         </HeadTr>
         {BOARD_DATA.map(data => (
@@ -62,4 +63,4 @@ const HeadTd = styled.td`
   vertical-align: middle;
 `;
 
-export default History;
+export default RthHistory;
