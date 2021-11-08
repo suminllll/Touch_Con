@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BtnOrange1, BtnOrange2 } from '../../components/button/buttons';
 import History from '../../components/History/History';
 import Title from '../../components/Title/Title';
 const RewardManagement = () => {
@@ -11,12 +12,12 @@ const RewardManagement = () => {
       />
       <Button>
         <AllSelect>
-          <Img src="images/버튼(전체선택).png" />
+          <BtnOrange1 text={'전체선택'} />
         </AllSelect>
         <Select>
-          <Img src="images/버튼(수정).png" />
-          <Img src="images/버튼(삭제).png" />
-          <Img src="images/버튼(중단).png" />
+          <BtnOrange2 text={'수정'} />
+          <BtnOrange2 text={'삭제'} />
+          <BtnOrange2 text={'중단'} />
         </Select>
       </Button>
       <Box>
