@@ -11,7 +11,23 @@ export const TtileInput = () => {
   return (
     <div style={{ marginLeft: 220, marginTop: 56 }}>
       <span style={{ marginRight: 31 }}>제목</span>
-      <input style={{ minWidth: 600 }} onChange={textHandle} value={text} />
+      <input style={{ minWidth: 537 }} onChange={textHandle} value={text} />
+    </div>
+  );
+};
+
+export const ComInput = () => {
+  const [text, setText] = useState('');
+
+  const textHandle = e => {
+    console.log(e);
+    setText(e.target.value);
+  };
+
+  return (
+    <div style={{ marginLeft: 220, marginTop: 12 }}>
+      <span style={{ marginRight: 31 }}>기업명</span>
+      <input style={{ minWidth: 537 }} onChange={textHandle} value={text} />
     </div>
   );
 };
