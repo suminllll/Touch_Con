@@ -38,14 +38,8 @@ const RewardPublish = () => {
             <InputPlaceholder placeholder="숫자만 입력 해주세요." />
           </Ul>
           <Ul>
-            <TitleBox>전송일</TitleBox>
             <MiddleWrap>
-              <CalendarBox>
-                <CalendarDiv>20-07-22 - 21-07-22</CalendarDiv>
-                <ArrowButton>
-                  <ArrowImg alt="allow" src="/images/Polygon1.png" />
-                </ArrowButton>
-              </CalendarBox>
+              <TitleBox />
               <RadioWrapper>
                 <Radio
                   handleClickAdmin={handleClickButton}
@@ -151,41 +145,11 @@ const InputPlaceholder = styled(InputBox)`
   }
 `;
 
-const CalendarBox = styled.div`
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin-right: 15px;
-  background-color: #e5e5e5;
-  border-radius: 3px;
-`;
-
-const CalendarDiv = styled.div`
-  padding: 8px 0px 4px 8px;
-  min-width: 12vw;
-  font-size: 17px;
-  letter-spacing: 0.8px;
-`;
-
-const ArrowButton = styled.button`
-  background-color: transparent;
-  border-style: none;
-  margin-top: 4px;
-  margin-right: 5px;
-  cursor: pointer;
-`;
-
-const ArrowImg = styled.img`
-  height: 9px;
-  width: 9px;
-  color: lightgray;
-  object-fit: cover;
-`;
-
 const RadioWrapper = styled.div`
   display: flex;
+  justify-content: right;
   padding-top: 11px;
-  margin-left: 15px;
+  margin-left: 155px;
 `;
 
 const PhotoInputBox = styled(InputBox)`
