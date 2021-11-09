@@ -172,6 +172,7 @@ const ArrowButton = styled.button`
   border-style: none;
   margin-top: 4px;
   margin-right: 5px;
+  cursor: pointer;
 `;
 
 const ArrowImg = styled.img`
@@ -198,6 +199,7 @@ const File = styled.button`
   padding: 0 25px 0 25px;
   border: none;
   letter-spacing: 0.5px;
+  cursor: pointer;
 `;
 
 const LastInputBox = styled(InputBox)`
@@ -234,4 +236,5 @@ const PublishButton = styled.button`
   border-radius: 5px;
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
 `;
