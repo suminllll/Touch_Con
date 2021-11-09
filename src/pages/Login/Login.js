@@ -33,7 +33,8 @@ const Login = () => {
           <InputWrap>
             <LoginInputBox />
             <LoginInputBox />
-            <ChangeBox>기업회원가입</ChangeBox>
+            {!inputStatus && <ChangeBox>관리자회원가입</ChangeBox>}
+            {inputStatus && <ChangeBox>기업회원가입</ChangeBox>}
           </InputWrap>
           <LoginButton>로그인</LoginButton>
         </LoginWrapper>
@@ -123,4 +124,5 @@ const LoginButton = styled.button`
   border: 2px solid orange;
   border-radius: 5px;
   font-weight: bold;
+  cursor: pointer;
 `;

@@ -14,17 +14,9 @@ const Notice = () => {
           <div>
             <TitleWrap>
               <TitleBox>제목</TitleBox>
-              <TitleInputBox />
+              <InputBox />
             </TitleWrap>
-            <TitleWrap>
-              <TitleBox>등록일</TitleBox>
-              <CalendarBox>
-                <CalendarDiv>20-07-22 - 21-07-22</CalendarDiv>
-                <ArrowButton>
-                  <ArrowImg alt="allow" src="/images/Polygon1.png" />
-                </ArrowButton>
-              </CalendarBox>
-            </TitleWrap>
+
             <TitleWrap>
               <TitleBox>게시자</TitleBox>
               <PostingInputBox />
@@ -74,48 +66,14 @@ const TitleBox = styled.div`
 
 const InputBox = styled.input`
   height: 28px;
+  min-width: 45vw;
+  margin-left: 5px;
   border: 1px solid lightgray;
   border-radius: 3px;
-  margin-left: 5px;
-`;
-
-const TitleInputBox = styled(InputBox)`
-  min-width: 45vw;
-`;
-const CalendarBox = styled.div`
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin-left: -6px;
-  background-color: #e5e5e5;
-  border-radius: 3px;
-`;
-
-const CalendarDiv = styled.div`
-  padding: 8px 0px 4px 8px;
-  min-width: 12vw;
-  font-size: 17px;
-  letter-spacing: 0.8px;
-`;
-
-const ArrowButton = styled.button`
-  background-color: transparent;
-  border-style: none;
-  margin-top: 4px;
-  margin-right: 5px;
-  cursor: pointer;
-`;
-
-const ArrowImg = styled.img`
-  height: 9px;
-  width: 9px;
-  color: lightgray;
-  object-fit: cover;
 `;
 
 const PostingInputBox = styled(InputBox)`
-  min-width: 45vw;
-  margin-left: -6px;
+  margin-left: -9px;
 `;
 
 const BottomBox = styled.div`
