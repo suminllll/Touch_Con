@@ -5,6 +5,7 @@ import CheckBox from '../../components/CheckBox/CheckBox';
 import AdminBtn from '../../components/AdminBtn/AdminBtn';
 import Title from '../../components/Title/Title';
 import Menu from '../../components/Menu/Menu';
+import { Link } from 'react-router-dom';
 
 const SingUp = () => {
   return (
@@ -21,13 +22,21 @@ const SingUp = () => {
           <Span>[필수] 개인정보 수집 및 이용 동의</Span>
         </SignupCheck>
         <Button>
-          <AdminBtn btnName="취소" />
-          <AdminBtn btnName="가입" color="#fd7f36" />
+          <LinkStyle to="/login">
+            <AdminBtn btnName="취소" />
+          </LinkStyle>
+          <LinkStyle to="/RewardCh">
+            <AdminBtn btnName="가입" color="#fd7f36" />
+          </LinkStyle>
         </Button>
       </Section>
     </>
   );
 };
+
+const LinkStyle = styled(Link)`
+  text-decoration: none;
+`;
 
 const Section = styled.div`
   position: relative;

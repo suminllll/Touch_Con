@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Radio from '../../components/Radio/Radio';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [inputStatus, setInputStatus] = useState(false);
@@ -33,8 +34,9 @@ const Login = () => {
           <InputWrap>
             <LoginInputBox />
             <LoginInputBox />
-            {!inputStatus && <ChangeBox>관리자회원가입</ChangeBox>}
-            {inputStatus && <ChangeBox>기업회원가입</ChangeBox>}
+            <LinkStyle to="/signUp">
+              <ChangeBox>기업회원가입</ChangeBox>
+            </LinkStyle>
           </InputWrap>
           <LoginButton>로그인</LoginButton>
         </LoginWrapper>
@@ -44,6 +46,10 @@ const Login = () => {
 };
 
 export default Login;
+
+const LinkStyle = styled(Link)`
+  text-decoration: none;
+`;
 
 const Form = styled.form`
   display: flex;
