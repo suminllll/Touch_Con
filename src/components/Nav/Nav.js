@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [login, setLogin] = useState(false);
@@ -10,15 +11,19 @@ const Nav = () => {
   return (
     <Top>
       <OverWrap>
-        <LogoImg alt="logoImg" src="/images/Group.png" />
+        <LinkStyle to="/">
+          <LogoImg alt="logoImg" src="/images/Group.png" />
+        </LinkStyle>
       </OverWrap>
 
       <OverWrapRight>
         <Text>
           <LogoutImg alt="logoutImg" src="/images/Vector.png" />
-          <LoginButton onClick={changLog} changeLogin={login}>
-            로그인
-          </LoginButton>
+          <LinkStyle to="/Login">
+            <LoginButton onClick={changLog} changeLogin={login}>
+              로그인
+            </LoginButton>
+          </LinkStyle>
           <LogoutButton onClick={changLog} changeLogin={login}>
             로그아웃
           </LogoutButton>
@@ -31,6 +36,10 @@ const Nav = () => {
 };
 
 export default Nav;
+
+const LinkStyle = styled(Link)`
+  text-decoration: none;
+`;
 
 const Top = styled.nav`
   display: flex;
@@ -73,8 +82,8 @@ const Rectangle_9 = styled.div`
 const Text = styled.div`
   display: flex;
   align-items: center;
-  letter-spacing: -0.46px;
   top: 26px;
+  letter-spacing: -0.46px;
 `;
 
 const LogoutImg = styled.img`
@@ -90,6 +99,7 @@ const ButtonStyle = styled.button`
   border-style: none;
   font-size: 23px;
   font-weight: bold;
+  cursor: pointer;
 `;
 const LoginButton = styled(ButtonStyle)`
   ${({ changeLogin }) => {

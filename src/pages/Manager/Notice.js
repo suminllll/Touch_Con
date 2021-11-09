@@ -103,6 +103,7 @@ const ArrowButton = styled.button`
   border-style: none;
   margin-top: 4px;
   margin-right: 5px;
+  cursor: pointer;
 `;
 
 const ArrowImg = styled.img`
