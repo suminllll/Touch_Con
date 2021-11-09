@@ -29,19 +29,19 @@ const Menu = props => {
           />
           <ul className={isOpen.RewardList ? 'active' : 'hide'}>
             <li>
-              <Link to="/RewardCh">생성내역</Link>
+              <LinkStyle to="/RewardCh">생성내역</LinkStyle>
             </li>
             <li>
-              <Link to="/RewardTh">전송내역</Link>
+              <LinkStyle to="/RewardTh">전송내역</LinkStyle>
             </li>
             <li>
-              <Link to="/RewardPublish">리워드콘 발행</Link>
+              <LinkStyle to="/RewardPublish">리워드콘 발행</LinkStyle>
             </li>
             <li>
-              <Link to="/RewardKeep">리워드콘 보관</Link>
+              <LinkStyle to="/RewardKeep">리워드콘 보관</LinkStyle>
             </li>
             <li>
-              <Link to="/RewardManagement">리워드콘 관리</Link>
+              <LinkStyle to="/RewardManagement">리워드콘 관리</LinkStyle>
             </li>
           </ul>
         </RewardList>
@@ -58,7 +58,7 @@ const Menu = props => {
           />
           <ul className={isOpen.PointList ? 'active' : 'hide'}>
             <li>
-              <Link to="/TpManagement">터치포인트관리</Link>
+              <LinkStyle to="/TpManagement">터치포인트관리</LinkStyle>
             </li>
           </ul>
         </PointList>
@@ -75,15 +75,14 @@ const Menu = props => {
           />
           <ul className={isOpen.PublishList ? 'active' : 'hide'}>
             <li>
-              <Link to="/IhTouchPoint">터치포인트</Link>
+              <LinkStyle to="/IhTouchPoint">터치포인트</LinkStyle>
             </li>
             <li>
-              <Link to="/IhRewardCon">리워드콘</Link>
+              <LinkStyle to="/IhRewardCon">리워드콘</LinkStyle>
             </li>
           </ul>
         </PublishList>
         <AdminList>
-          {' '}
           <Img
             alt="admin"
             src={isOpen.AdminList ? 'images/admin(on).png' : 'images/admin.png'}
@@ -92,13 +91,13 @@ const Menu = props => {
           />
           <ul className={isOpen.AdminList ? 'active' : 'hide'}>
             <li>
-              <Link to="/AppDocDetail">신청서류내역</Link>
+              <LinkStyle to="/AppDocDetail">신청서류내역</LinkStyle>
             </li>
             <li>
-              <Link to="/PointAllocation">포인트 배정</Link>
+              <LinkStyle to="/PointAllocation">포인트 배정</LinkStyle>
             </li>
             <li>
-              <Link to="/Notice">공지사항</Link>
+              <LinkStyle to="/Notice">공지사항</LinkStyle>
             </li>
           </ul>
         </AdminList>
@@ -107,12 +106,17 @@ const Menu = props => {
   );
 };
 
+const LinkStyle = styled(Link)`
+  text-decoration: none;
+  color: black;
+`;
+
 const Aside = styled.section`
   position: fixed;
   z-index: 9999;
   height: 100%;
   left: 0;
-  margin-top: 80px; //nav 오면 지울것.
+  margin-top: 80px;
   background-color: #f6f6f6;
 `;
 
@@ -130,9 +134,11 @@ const RewardList = styled.li`
   .hide {
     display: none;
   }
+
   .active {
     font-size: 23px;
     padding-left: 50px;
+
     li {
       padding-top: 20px;
     }
@@ -142,9 +148,11 @@ const PointList = styled.li`
   .hide {
     display: none;
   }
+
   .active {
     font-size: 23px;
     padding-left: 50px;
+
     li {
       padding-top: 20px;
     }
@@ -154,21 +162,26 @@ const PublishList = styled.li`
   .hide {
     display: none;
   }
+
   .active {
     font-size: 23px;
     padding-left: 50px;
+
     li {
       padding-top: 20px;
     }
   }
 `;
+
 const AdminList = styled.li`
   .hide {
     display: none;
   }
+
   .active {
     font-size: 23px;
     padding-left: 50px;
+
     li {
       padding-top: 20px;
     }
