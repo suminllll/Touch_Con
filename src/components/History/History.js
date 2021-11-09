@@ -50,7 +50,7 @@ const History = ({ style }) => {
 const Container = styled.div``;
 
 const Table = styled.table`
-  width: 100%;
+  min-width: 75vw;
   margin-right: 550px;
   text-align: center;
   border: 1px solid #dddddd;

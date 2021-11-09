@@ -35,7 +35,7 @@ const Notice = () => {
           </div>
         </MiddleWrap>
         <HistoryWrap>
-          <History />
+          <History style={{ marginLeft: -40 }} />
         </HistoryWrap>
         <BottomBox>
           <Link to="/NoticeRegister">
