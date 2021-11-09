@@ -2,7 +2,7 @@ import React from 'react';
 import Title from '../../components/Title/Title';
 import { TtileInput } from '../../components/Input/Inputs';
 import { SendDate } from '../../components/Select/SendDate';
-import DatePicker from 'react-datepicker';
+import styled from 'styled-components';
 import { Btn1 } from '../../components/button/buttons';
 import History from '../../components/History/History';
 
@@ -37,3 +37,12 @@ const RewardCh = () => {
 };
 
 export default RewardCh;
+
+const HeadImg = styled.img`
+  position: absolute;
+`;
+
+const Box = styled.div`
+  margin-top: 100px;
+  margin-left: 360px;
+`;

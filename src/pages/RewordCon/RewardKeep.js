@@ -18,33 +18,86 @@ const RewardKeep = () => {
         <div>
           <div
             style={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginTop: 78,
+              display: 'grid',
+              width: '90%',
+              maxWidth: 1240,
+              gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
+              gridTemplateRows: '2fr',
+              marginLeft: 200,
+              gap: 20,
+              marginBottom: 30,
             }}
           >
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-          </div>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <div>2</div>
-            <div>2</div>
-            <div>2</div>
-            <div>2</div>
-            <div>2</div>
-            <div>2</div>
+            <img
+              src={require('../../assets/rkeep_pic.jpg').default}
+              style={{
+                width: 165,
+                height: 350,
+              }}
+            />
+            <img
+              src={require('../../assets/rkeep_pic.jpg').default}
+              style={{
+                width: 165,
+                height: 350,
+              }}
+            />
+            <img
+              src={require('../../assets/rkeep_pic.jpg').default}
+              style={{
+                width: 165,
+                height: 350,
+              }}
+            />
+            <img
+              src={require('../../assets/rkeep_pic.jpg').default}
+              style={{
+                width: 165,
+                height: 350,
+              }}
+            />
+            <img
+              src={require('../../assets/rkeep_pic.jpg').default}
+              style={{
+                width: 165,
+                height: 350,
+              }}
+            />
+            <img
+              src={require('../../assets/rkeep_pic.jpg').default}
+              style={{
+                width: 165,
+                height: 350,
+              }}
+            />
+            <img
+              src={require('../../assets/rkeep_pic.jpg').default}
+              style={{
+                width: 165,
+                height: 350,
+              }}
+            />
+            <img
+              src={require('../../assets/rkeep_blank_pic.png').default}
+              style={{
+                width: 165,
+                height: 350,
+              }}
+            />
+            <img
+              src={require('../../assets/rkeep_blank_pic.png').default}
+              style={{
+                width: 165,
+                height: 350,
+              }}
+            />
+            <img
+              src={require('../../assets/rkeep_blank_pic.png').default}
+              style={{
+                width: 165,
+                height: 350,
+              }}
+            />
           </div>
         </div>
       </div>
