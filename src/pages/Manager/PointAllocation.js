@@ -11,7 +11,7 @@ const PointAllocation = () => {
         titleText="포인트 배정"
         categoryText="관리자 페이지 > 포인트 배정"
       />
-      <Article>
+      <>
         <TopWrap>
           <TitleWrap>
             <TitleBox>기업명</TitleBox>
@@ -23,23 +23,19 @@ const PointAllocation = () => {
           </TitleWrap>
           <AdminBtn btnName="포인트 배정" color="#fd7f36" />
         </TopWrap>
-        <History />
-      </Article>
+        <History style={{ marginLeft: 360 }} />
+      </>
     </>
   );
 };
 
 export default PointAllocation;
 
-const Article = styled.article`
-  margin: 40px 110px 0 400px;
-`;
-
 const TopWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
+  margin: 40px 110px 50px 400px;
 `;
 
 const TitleWrap = styled.div`

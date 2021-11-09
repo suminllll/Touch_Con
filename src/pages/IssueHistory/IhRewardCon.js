@@ -11,12 +11,12 @@ const IhRewardCon = () => {
       <div
         style={{
           flex: 1,
-          marginLeft: 170,
+          marginLeft: 185,
         }}
       >
         <TextBox />
         <TcPointBox />
-        <RcHistory style={{ marginLeft: 170, marginTop: 93 }} />
+        <RcHistory style={{ marginLeft: 175, marginTop: 93 }} />
       </div>
     </>
   );

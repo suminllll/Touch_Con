@@ -53,7 +53,7 @@ const HeadImg = styled.img`
 
 const Box = styled.div`
   margin-top: 100px;
-  margin-left: 400px;
+  margin-left: 360px;
 `;
 
 export default RewardTh;

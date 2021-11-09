@@ -48,7 +48,7 @@ const Container = styled.div`
 `;
 
 const Table = styled.table`
-  width: 1032px;
+  width: 1200px;
   text-align: center;
   border: 1px solid #dddddd;
 `;
