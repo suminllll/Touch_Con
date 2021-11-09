@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import AdminBtn from '../../components/AdminBtn/AdminBtn';
 import Title from '../../components/Title/Title';
+import { Link } from 'react-router-dom';
 
 const NoticeRegister = () => {
   return (
@@ -24,12 +25,16 @@ const NoticeRegister = () => {
         </TitleWrap>
 
         <ButtonWrap>
-          <ButtonBox>
-            <AdminBtn btnName="취소" />
-          </ButtonBox>
-          <ButtonBox>
-            <AdminBtn color="#fd7f36" btnName="등록" />
-          </ButtonBox>
+          <LinkStyle to="/Notice">
+            <ButtonBox>
+              <AdminBtn btnName="취소" />
+            </ButtonBox>
+          </LinkStyle>
+          <LinkStyle to="/Notice">
+            <ButtonBox>
+              <AdminBtn color="#fd7f36" btnName="등록" />
+            </ButtonBox>
+          </LinkStyle>
         </ButtonWrap>
       </Article>
     </>
@@ -38,6 +43,9 @@ const NoticeRegister = () => {
 
 export default NoticeRegister;
 
+const LinkStyle = styled(Link)`
+  text-decoration: none;
+`;
 const Article = styled.article`
   margin: 40px 110px 0 400px;
 `;
