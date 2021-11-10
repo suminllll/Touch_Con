@@ -1,13 +1,20 @@
+/* eslint-disable react/no-danger-with-children */
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Title from '../../components/Title/Title';
 import Radio from '../../components/Radio/Radio';
 
 const RewardPublish = () => {
-  const [inputStatus, setInputStatus] = useState(false);
+  const [inputStatus, setInputStatus] = useState('');
+  const [save, setSave] = useState('');
 
-  const handleClickButton = () => {
-    setInputStatus(!inputStatus);
+  const handleClickButton = buttonName => {
+    setInputStatus(buttonName);
+  };
+
+  const saveImg = e => {
+    const save = e.target.value;
+    setSave(save);
   };
 
   return (
@@ -43,27 +50,32 @@ const RewardPublish = () => {
               <RadioWrapper>
                 <Radio
                   handleClickAdmin={handleClickButton}
-                  click={!inputStatus}
+                  click={inputStatus === 'first'}
                   text="개별발송(준비중)"
+                  id="first"
                 />
                 <Radio
                   handleClickAdmin={handleClickButton}
-                  click={inputStatus}
+                  click={inputStatus === 'second'}
                   text="대량발송(준비중)"
+                  id="second"
                 />
                 <Radio
                   handleClickAdmin={handleClickButton}
-                  click={inputStatus}
+                  click={inputStatus === 'third'}
                   text="보관"
+                  id="third"
                 />
               </RadioWrapper>
             </MiddleWrap>
           </Ul>
           <Ul>
             <TitleBox>사진업로드</TitleBox>
-            <PhotoInputBox />
-
-            <File>파일찾기</File>
+            <PhotoSaveBox>{save}</PhotoSaveBox>
+            <Lable htmlFor="file">
+              파일찾기
+              <File onChange={saveImg} />
+            </Lable>
           </Ul>
           <Ul>
             <TitleBox>안내 메모</TitleBox>
@@ -152,18 +164,32 @@ const RadioWrapper = styled.div`
   margin-left: 155px;
 `;
 
-const PhotoInputBox = styled(InputBox)`
+const PhotoSaveBox = styled.div`
+  height: 28px;
   width: 34vw;
+  margin-left: 5px;
   margin-right: -10px;
+  padding-top: 9px;
+  padding-left: 10px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
 `;
 
-const File = styled.button`
+const Lable = styled.label`
   background-color: #c4c4c4;
   height: 28px;
-  padding: 0 25px 0 25px;
+  padding: 8px 25px;
   border: none;
   letter-spacing: 0.5px;
   cursor: pointer;
+`;
+
+const File = styled.input.attrs({
+  id: 'file',
+  type: 'file',
+  accept: 'image/png, image/jpeg',
+})`
+  display: none;
 `;
 
 const LastInputBox = styled(InputBox)`

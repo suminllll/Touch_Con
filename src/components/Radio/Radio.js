@@ -1,25 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Radio = props => {
-  const { handleClickAdmin, click, text } = props;
-
+const Radio = ({ handleClickAdmin, click, text, id }) => {
   return (
     <ButtonBox>
       <AdminText>
         <NomalImg
-          onClick={handleClickAdmin}
+          onClick={() => handleClickAdmin(id)}
           alt="nomalImg"
           src="/images/비활성화.png"
           show={click}
         />
         <ChangedImg
-          onClick={handleClickAdmin}
+          onClick={() => handleClickAdmin(id)}
           alt="changedImg"
           src="/images/활성화.png"
           show={click}
         />
-
         {text}
       </AdminText>
     </ButtonBox>
@@ -35,7 +32,7 @@ const ButtonBox = styled.div`
   margin-bottom: 20px;
 `;
 
-const AdminText = styled.label`
+const AdminText = styled.div`
   display: flex;
   align-items: center;
   margin-right: 30px;

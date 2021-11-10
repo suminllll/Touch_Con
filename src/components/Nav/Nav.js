@@ -11,7 +11,7 @@ const Nav = () => {
   return (
     <Top>
       <OverWrap>
-        <LinkStyle to="/">
+        <LinkStyle to="/RewardCh">
           <LogoImg alt="logoImg" src="/images/Group.png" />
         </LinkStyle>
       </OverWrap>
