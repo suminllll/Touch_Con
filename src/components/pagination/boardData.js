@@ -249,3 +249,102 @@ const DummyData = [
 ];
 
 export default DummyData;
+
+export const Images = [
+  {
+    id: 1,
+    headNumber: 1,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 2,
+    headNumber: 2,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 3,
+    headNumber: 3,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 4,
+    headNumber: 4,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 5,
+    headNumber: 5,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 6,
+    headNumber: 6,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 7,
+    headNumber: 7,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 8,
+    headNumber: 8,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 9,
+    headNumber: 9,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 10,
+    headNumber: 10,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 11,
+    headNumber: 11,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 12,
+    headNumber: 12,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 13,
+    headNumber: 13,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 14,
+    headNumber: 14,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 15,
+    headNumber: 15,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+  {
+    id: 16,
+    headNumber: 16,
+    img: require('../../assets/rkeep_pic.jpg').default,
+    result: '전송성공',
+  },
+];

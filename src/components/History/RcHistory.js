@@ -13,7 +13,9 @@ const RcHistory = ({ style }) => {
     parseInt(posts?.length / maxPostCount) + 1
   ); //전체 페이지 수
 
-  useEffect(() => {});
+  useEffect(() => {
+    DivisionPage();
+  }, [page]);
 
   const DivisionPage = () => {
     let postArry = [];
@@ -80,7 +82,9 @@ const RcHistory = ({ style }) => {
             onClickPageHandler(e, 'back');
           }}
           disabled={page === 1}
-        />
+        >
+          이전 페이지
+        </PageMove>
         <Pagination page={page} totalPage={totalPage} setPage={setPage} />
         <PageMove
           style={{ marginRight: 55 }}
@@ -88,7 +92,9 @@ const RcHistory = ({ style }) => {
             onClickPageHandler(e, 'back');
           }}
           disabled={page === totalPage}
-        />
+        >
+          다음 페이지
+        </PageMove>
       </PageContainer>
     </Container>
   );
