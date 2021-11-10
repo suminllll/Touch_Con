@@ -7,7 +7,7 @@ import Pagination from '../pagination';
 
 const AddHistory = ({ Check, style }) => {
   const maxPostCount = 7;
-  const [posts, setPosts] = useState(BOARD_DATA);
+  const [posts, setPosts] = useState(DummyData);
   const [page, setPage] = useState(1); // 현재 페이지
   const [totalPage, setTotalPage] = useState(
     parseInt(posts?.length / maxPostCount) + 1
@@ -55,7 +55,7 @@ const AddHistory = ({ Check, style }) => {
                 height: 45,
                 background: '#FD7F36',
               }}
-            ></div>
+            />
             No.
           </HeadTd>
           <CheckTd Check={Check} />

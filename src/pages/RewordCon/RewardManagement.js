@@ -6,6 +6,7 @@ import CheckBox from '../../components/CheckBox/CheckBox';
 
 const RewardManagement = () => {
   //리워드콘 관리
+
   return (
     <Section>
       <Title

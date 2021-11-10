@@ -13,6 +13,7 @@ const CheckBox = () => {
       <AgreeBox>
         <Box onClick={checkBox} src="images/checkbox.png" />
         <Check
+          allCheck={checkBox}
           onClick={checkBox}
           className={checkToggle ? 'active' : 'hide'}
           src="images/check.png"
@@ -32,6 +33,7 @@ const Box = styled.img`
 
 const Check = styled.img`
   position: absolute;
+  display: ${props => (props.allCheck ? '""' : '"none"')};
 `;
 
 const AgreeBox = styled.div`

@@ -14,8 +14,8 @@ const AppDocDetail = () => {
       }}
     >
       <Title
-        titleText={'신청서류내역'}
-        categoryText={'관리자 페이지 > 신청서류내역'}
+        titleText="신청서류내역"
+        categoryText="관리자 페이지 > 신청서류내역"
       />
       <div
         style={{
@@ -39,7 +39,7 @@ const AppDocDetail = () => {
             날짜<div>기간 들어감 </div>
           </div>
         </div>
-        <Btn1 text={'검색'} style={{ marginTop: 33 }} />
+        <Btn1 text="검색" style={{ marginTop: 33 }} />
       </div>
       <div
         style={{
@@ -51,13 +51,13 @@ const AppDocDetail = () => {
         }}
       >
         <BtnOrange1
-          text={'전체선택'}
+          text="전체선택"
           style={{ marginLeft: 220, marginTop: 12 }}
         />
         <div>
-          <BtnOrange1 text={'전체선택'} />
-          <BtnOrange2 text={'삭제'} />
-          <BtnOrange2 text={'삭제'} />
+          <BtnOrange1 text="승인완료" />
+          <BtnOrange2 text="삭제" />
+          <BtnOrange2 text="중단" />
         </div>
       </div>
       <AddHistory Check="Check" style={{ marginLeft: 220, marginTop: 12 }} />

@@ -11,9 +11,23 @@ const Menu = props => {
     AdminList: false,
   });
 
+  const [listColorChange, setListColorChange] = useState(0);
+
   const toggleNav = e => {
     setIsOpen({ [e.target.name]: !isOpen[e.target.name] });
   };
+
+  const hadleChangeColor = index => {
+    setListColorChange(index);
+  };
+
+  const rewardCon = [
+    { id: 1, link: '/RewardCh', name: '생성내역' },
+    { id: 2, link: '/RewardTh', name: '전송내역' },
+    { id: 3, link: '/RewardPublish', name: '리워드콘 발행' },
+    { id: 4, link: '/RewardKeep', name: '리워드콘 보관' },
+    { id: 5, link: '/RewardManagement', name: '리워드콘 관리' },
+  ];
 
   return (
     <Aside>
@@ -27,22 +41,24 @@ const Menu = props => {
             onClick={toggleNav}
             name="RewardList"
           />
+
           <ul className={isOpen.RewardList ? 'active' : 'hide'}>
-            <li>
-              <LinkStyle to="/RewardCh">생성내역</LinkStyle>
-            </li>
-            <li>
-              <LinkStyle to="/RewardTh">전송내역</LinkStyle>
-            </li>
-            <li>
-              <LinkStyle to="/RewardPublish">리워드콘 발행</LinkStyle>
-            </li>
-            <li>
-              <LinkStyle to="/RewardKeep">리워드콘 보관</LinkStyle>
-            </li>
-            <li>
-              <LinkStyle to="/RewardManagement">리워드콘 관리</LinkStyle>
-            </li>
+            {rewardCon.map((data, index) => {
+              return (
+                <li>
+                  <LinkStyle
+                    to={data.link}
+                    onClick={() => hadleChangeColor(index)}
+                    key={data.id}
+                    index={index}
+                    listColorChange={listColorChange}
+                  >
+                    {data.name}
+                    {console.log(listColorChange)}
+                  </LinkStyle>
+                </li>
+              );
+            })}
           </ul>
         </RewardList>
         <PointList>
@@ -108,7 +124,8 @@ const Menu = props => {
 
 const LinkStyle = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: ${props =>
+    props.index === props.listColorChange ? '#0068D9' : 'black'};
 `;
 
 const Aside = styled.section`
