@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import RewardConHistory from '../../components/History/RewardConHistory';
 import Title from '../../components/Title/Title';
 import CheckBox from '../../components/CheckBox/CheckBox';
+
 const RewardManagement = () => {
   //리워드콘 관리
   return (
@@ -50,14 +51,16 @@ const Button = styled.div`
   margin-top: 80px;
 `;
 
-const AllSelect = styled.div``;
+const AllSelect = styled.div`
+  margin-left: -3px;
+`;
 
 const HeadImg = styled.img`
   position: absolute;
 `;
 
 const Select = styled.div`
-  margin-right: 100px;
+  margin-right: 37px;
 `;
 
 const Img = styled.img`

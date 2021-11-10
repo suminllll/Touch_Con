@@ -7,7 +7,7 @@ const CheckBox = () => {
   const checkBox = () => {
     setCheckToggle(checkToggle => !checkToggle);
   };
-
+  // console.log(checkToggle);
   return (
     <Agree>
       <AgreeBox>

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Title from '../../components/Title/Title';
 import Radio from '../../components/Radio/Radio';
+import { Link } from 'react-router-dom';
 
 const RewardPublish = () => {
   const [inputStatus, setInputStatus] = useState('');
@@ -86,7 +87,9 @@ const RewardPublish = () => {
           <QrBox>
             <Qr alt="qr" src="/images/Qr.png" />
           </QrBox>
-          <PublishButton>발행하기</PublishButton>
+          <LinkStyle to="/">
+            <PublishButton>발행하기</PublishButton>
+          </LinkStyle>
         </RightWrapper>
       </Main>
     </>
@@ -95,6 +98,9 @@ const RewardPublish = () => {
 
 export default RewardPublish;
 
+const LinkStyle = styled(Link)`
+  text-decoration: none;
+`;
 //부모 input 빈박스
 const InputBox = styled.input`
   height: 28px;

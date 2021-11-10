@@ -4,7 +4,6 @@ import CheckBox from '../CheckBox/CheckBox';
 
 const RewardConList = ({
   Check,
-  key,
   headNumber,
   contents,
   transferNumber,

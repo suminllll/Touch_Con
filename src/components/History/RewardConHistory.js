@@ -11,8 +11,6 @@ const RewardConHistory = ({
   contents,
   transferNumber,
   days,
-  published,
-  result,
 }) => {
   const maxPostCount = 9;
   const [posts, setPosts] = useState(DummyData);
@@ -60,6 +58,7 @@ const RewardConHistory = ({
           <RewardConList
             key={data.id}
             Check={Check}
+            all={Check}
             headNumber={data.id}
             contents={data.contents}
             transferNumber={data.transferNumber}
