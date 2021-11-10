@@ -49,13 +49,9 @@ const ChangeImg = styled.img`
 `;
 
 const NomalImg = styled(ChangeImg)`
-  ${({ show }) => {
-    return show ? `display:none` : `display:block`;
-  }}
+  display: ${props => (props.show ? 'none' : 'block')};
 `;
 
 const ChangedImg = styled(ChangeImg)`
-  ${({ show }) => {
-    return show ? `display:block` : `display:none`;
-  }}
+  display: ${props => (props.show ? 'block' : 'none')};
 `;

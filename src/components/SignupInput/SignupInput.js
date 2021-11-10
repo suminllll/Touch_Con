@@ -1,33 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SignupInput = ({ name }) => {
+const SignupInput = ({ name, placeHolder }) => {
   return (
     <InputGroup>
       <P>{name}</P>
-      <Input />
+      <Input placeholder={placeHolder} />
     </InputGroup>
   );
 };
 
 const InputGroup = styled.div`
   display: flex;
-  justify-content: center;
-  margin-top: 10px;
+  margin-left: 100px;
+  margin-top: 17px;
 `;
 
 const Input = styled.input`
-  width: 537px;
-  height: 28px;
+  min-width: 600px;
+  min-height: 30px;
   border-radius: 3px;
-  border: 0.5px solid black;
+  border: 0.5px solid #c4c4c4;
   margin-left: 30px;
 `;
 
 const P = styled.div`
-  width: 102px;
+  min-width: 110px;
   display: inline-block;
   margin-top: 10px;
   font-weight: 600;
+  font-size: 16px;
 `;
 export default SignupInput;

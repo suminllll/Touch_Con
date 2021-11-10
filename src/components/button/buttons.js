@@ -1,12 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 
 export const Btn1 = props => {
   const { text, style } = props;
 
-  console.log(text);
+  console.log('Btn1', text);
   return (
     <div>
-      <button
+      <Button
         style={{
           minWidth: 193,
           minHeight: 40,
@@ -15,11 +16,12 @@ export const Btn1 = props => {
           borderRadius: 5,
           color: 'white',
           cursor: 'pointer',
+          fontWeight: 800,
           ...style,
         }}
       >
         {text}
-      </button>
+      </Button>
     </div>
   );
 };
@@ -27,25 +29,23 @@ export const Btn1 = props => {
 export const Btn2 = props => {
   const { text, style } = props;
 
-  console.log(text);
+  console.log('Btn2', text);
 
   return (
-    <div>
-      <button
-        style={{
-          minWidth: 139,
-          minHeight: 40,
-          backgroundColor: '#FD7F36',
-          borderRadius: 5,
-          color: 'white',
-          fontSize: 18,
-          cursor: 'pointer',
-          ...style,
-        }}
-      >
-        {text}
-      </button>
-    </div>
+    <Button
+      style={{
+        minWidth: 139,
+        minHeight: 40,
+        backgroundColor: '#FD7F36',
+        borderRadius: 5,
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 800,
+        ...style,
+      }}
+    >
+      {text}
+    </Button>
   );
 };
 
@@ -54,7 +54,7 @@ export const BtnOrange1 = props => {
   console.log(text);
 
   return (
-    <button
+    <Button
       style={{
         minWidth: 77,
         minHeight: 30,
@@ -66,11 +66,12 @@ export const BtnOrange1 = props => {
         color: '#FD7F36',
         fontSize: 18,
         cursor: 'pointer',
+        fontWeight: 800,
         ...style,
       }}
     >
       {text}
-    </button>
+    </Button>
   );
 };
 
@@ -78,7 +79,7 @@ export const BtnOrange2 = props => {
   const { text, style } = props;
 
   return (
-    <button
+    <Button
       style={{
         minWidth: 50,
         minHeight: 30,
@@ -88,10 +89,16 @@ export const BtnOrange2 = props => {
         color: '#FD7F36',
         fontSize: 18,
         cursor: 'pointer',
+        fontWeight: 800,
         ...style,
       }}
     >
       {text}
-    </button>
+    </Button>
   );
 };
+
+const Button = styled.button`
+  border-style: none;
+  cursor: pointer;
+`;

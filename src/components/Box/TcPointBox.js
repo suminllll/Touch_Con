@@ -21,6 +21,15 @@ const TcPointBox = () => {
           justifyContent: 'space-between',
           margin: 'auto',
         }}
+      />
+
+      <div
+        style={
+          {
+            // marginRight: 160,
+            // minwidth: 332,
+          }
+        }
       >
         <RightDiv style={{ marginRight: 105 }}>
           <div style={{ fontSize: 14, fontWeight: 600 }}>
@@ -47,11 +56,11 @@ const TcPointBox = () => {
             top: 331,
             background: '#EE7E24',
           }}
-        ></div>
+        />
 
         <RightDiv style={{ marginLeft: 105 }}>
           <div style={{ fontSize: 14, fontWeight: 600 }}>
-            사요한 터치 포인트 수량
+            사용한 터치 포인트 수량
           </div>
           <div
             style={{
@@ -70,10 +79,8 @@ const TcPointBox = () => {
   );
 };
 
-export default TcPointBox;
-
 const RightDiv = styled.div`
   display: flex;
-  flexdirection: row;
-  justifycontent: space-between;
 `;
+
+export default TcPointBox;

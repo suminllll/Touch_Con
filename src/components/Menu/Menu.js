@@ -11,9 +11,23 @@ const Menu = props => {
     AdminList: false,
   });
 
+  const [listColorChange, setListColorChange] = useState(0);
+
   const toggleNav = e => {
     setIsOpen({ [e.target.name]: !isOpen[e.target.name] });
   };
+
+  const hadleChangeColor = index => {
+    setListColorChange(index);
+  };
+
+  const rewardCon = [
+    { id: 1, link: '/RewardCh', name: '생성내역' },
+    { id: 2, link: '/RewardTh', name: '전송내역' },
+    { id: 3, link: '/RewardPublish', name: '리워드콘 발행' },
+    { id: 4, link: '/RewardKeep', name: '리워드콘 보관' },
+    { id: 5, link: '/RewardManagement', name: '리워드콘 관리' },
+  ];
 
   return (
     <Aside>
@@ -27,22 +41,24 @@ const Menu = props => {
             onClick={toggleNav}
             name="RewardList"
           />
+
           <ul className={isOpen.RewardList ? 'active' : 'hide'}>
-            <li>
-              <LinkStyle to="/RewardCh">생성내역</LinkStyle>
-            </li>
-            <li>
-              <LinkStyle to="/RewardTh">전송내역</LinkStyle>
-            </li>
-            <li>
-              <LinkStyle to="/RewardPublish">리워드콘 발행</LinkStyle>
-            </li>
-            <li>
-              <LinkStyle to="/RewardKeep">리워드콘 보관</LinkStyle>
-            </li>
-            <li>
-              <LinkStyle to="/RewardManagement">리워드콘 관리</LinkStyle>
-            </li>
+            {rewardCon.map((data, index) => {
+              return (
+                <li>
+                  <LinkStyle
+                    to={data.link}
+                    onClick={() => hadleChangeColor(index)}
+                    key={data.id}
+                    index={index}
+                    listColorChange={listColorChange}
+                  >
+                    {data.name}
+                    {console.log(listColorChange)}
+                  </LinkStyle>
+                </li>
+              );
+            })}
           </ul>
         </RewardList>
         <PointList>
@@ -58,7 +74,16 @@ const Menu = props => {
           />
           <ul className={isOpen.PointList ? 'active' : 'hide'}>
             <li>
-              <LinkStyle to="/TpManagement">터치포인트관리</LinkStyle>
+              <LinkStyle
+                to="/TpManagement"
+                onClick={() => hadleChangeColor(5)}
+                listColorChange={listColorChange}
+                key={5}
+                index={5}
+              >
+                {' '}
+                터치포인트관리
+              </LinkStyle>
             </li>
           </ul>
         </PointList>
@@ -75,10 +100,26 @@ const Menu = props => {
           />
           <ul className={isOpen.PublishList ? 'active' : 'hide'}>
             <li>
-              <LinkStyle to="/IhTouchPoint">터치포인트</LinkStyle>
+              <LinkStyle
+                to="/IhTouchPoint"
+                onClick={() => hadleChangeColor(6)}
+                listColorChange={listColorChange}
+                key={6}
+                index={6}
+              >
+                터치포인트
+              </LinkStyle>
             </li>
             <li>
-              <LinkStyle to="/IhRewardCon">리워드콘</LinkStyle>
+              <LinkStyle
+                to="/IhRewardCon"
+                onClick={() => hadleChangeColor(7)}
+                listColorChange={listColorChange}
+                key={7}
+                index={7}
+              >
+                리워드콘
+              </LinkStyle>
             </li>
           </ul>
         </PublishList>
@@ -91,13 +132,37 @@ const Menu = props => {
           />
           <ul className={isOpen.AdminList ? 'active' : 'hide'}>
             <li>
-              <LinkStyle to="/AppDocDetail">신청서류내역</LinkStyle>
+              <LinkStyle
+                to="/AppDocDetail"
+                onClick={() => hadleChangeColor(8)}
+                listColorChange={listColorChange}
+                key={8}
+                index={8}
+              >
+                신청서류내역
+              </LinkStyle>
             </li>
             <li>
-              <LinkStyle to="/PointAllocation">포인트 배정</LinkStyle>
+              <LinkStyle
+                to="/PointAllocation"
+                onClick={() => hadleChangeColor(9)}
+                key={9}
+                index={9}
+                listColorChange={listColorChange}
+              >
+                포인트 배정
+              </LinkStyle>
             </li>
             <li>
-              <LinkStyle to="/Notice">공지사항</LinkStyle>
+              <LinkStyle
+                to="/Notice"
+                onClick={() => hadleChangeColor(10)}
+                key={10}
+                index={10}
+                listColorChange={listColorChange}
+              >
+                공지사항
+              </LinkStyle>
             </li>
           </ul>
         </AdminList>
@@ -108,7 +173,8 @@ const Menu = props => {
 
 const LinkStyle = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: ${props =>
+    props.index === props.listColorChange ? '#0068D9' : 'black'};
 `;
 
 const Aside = styled.section`

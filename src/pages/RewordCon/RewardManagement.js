@@ -14,6 +14,7 @@ const RewardManagement = () => {
   };
 
   //리워드콘 관리
+
   return (
     <Section>
       <Title
@@ -55,7 +56,7 @@ const Section = styled.div`
 `;
 
 const Box = styled.div`
-  margin-left: 360px;
+  margin-left: 23vw;
 `;
 
 const Button = styled.div`
