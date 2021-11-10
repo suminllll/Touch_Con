@@ -9,8 +9,6 @@ const RewardConHistory = ({
   contents,
   transferNumber,
   days,
-  published,
-  result,
 }) => {
   return (
     <Container>
@@ -28,6 +26,7 @@ const RewardConHistory = ({
           <RewardConList
             key={data.id}
             Check={Check}
+            all={Check}
             headNumber={data.id}
             contents={data.contents}
             transferNumber={data.transferNumber}
