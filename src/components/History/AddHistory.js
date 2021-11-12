@@ -5,7 +5,7 @@ import BOARD_DATA from './HistoryList/boardData';
 import DummyData from '../pagination/boardData';
 import Pagination from '../pagination';
 
-const AddHistory = ({ Check, style }) => {
+const AddHistory = ({ Check, style, AllClick }) => {
   const maxPostCount = 7;
   const [posts, setPosts] = useState(DummyData);
   const [page, setPage] = useState(1); // 현재 페이지
@@ -56,7 +56,6 @@ const AddHistory = ({ Check, style }) => {
                 background: '#FD7F36',
               }}
             />
-            No.
           </HeadTd>
           <CheckTd Check={Check} />
           <HeadTd>No.</HeadTd>
@@ -73,6 +72,7 @@ const AddHistory = ({ Check, style }) => {
             number={data.number}
             day={data.day}
             Check={Check}
+            AllClick={AllClick}
           />
         ))}
       </Table>
@@ -105,7 +105,8 @@ const AddHistory = ({ Check, style }) => {
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin: 50px 0;
+  bottom: 0;
 `;
 const PageMove = styled.button`
   font-family: Work Sans;
@@ -125,9 +126,8 @@ const Container = styled.div`
 `;
 
 const Table = styled.table`
-  width: 1032px;
+  min-width: 74vw;
   text-align: center;
-  border: 1px solid #dddddd;
 `;
 
 const HeadTr = styled.tr`
