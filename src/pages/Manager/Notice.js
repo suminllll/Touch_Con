@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import AdminBtn from '../../components/AdminBtn/AdminBtn';
 import Title from '../../components/Title/Title';
@@ -6,6 +6,12 @@ import History from '../../components/History/History';
 import { Link } from 'react-router-dom';
 
 const Notice = () => {
+  const [text, setText] = useState('');
+
+  const textHandle = e => {
+    console.log(e);
+    setText(e.target.value);
+  };
   return (
     <>
       <Title titleText="공지사항" categoryText="관리자 페이지 > 공지사항" />
@@ -14,12 +20,12 @@ const Notice = () => {
           <div>
             <TitleWrap>
               <TitleBox>제목</TitleBox>
-              <InputBox />
+              <InputBox onChange={textHandle} value={text} />
             </TitleWrap>
 
             <TitleWrap>
               <TitleBox>게시자</TitleBox>
-              <PostingInputBox />
+              <PostingInputBox onChange={textHandle} value={text} />
             </TitleWrap>
           </div>
           <div>

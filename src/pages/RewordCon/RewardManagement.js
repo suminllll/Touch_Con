@@ -3,8 +3,15 @@ import styled from 'styled-components';
 import RewardConHistory from '../../components/History/RewardConHistory';
 import Title from '../../components/Title/Title';
 import CheckBox from '../../components/CheckBox/CheckBox';
+import { useState } from 'react/cjs/react.development';
 
 const RewardManagement = () => {
+  const [allClick, setAllClick] = useState(false);
+
+  const handleAllClick = () => {
+    setAllClick(!allClick);
+  };
+
   //리워드콘 관리
 
   return (
@@ -16,7 +23,7 @@ const RewardManagement = () => {
       <Box>
         <Button>
           <AllSelect>
-            <Img src="images/버튼(전체선택).png" />
+            <Img onClick={handleAllClick} src="images/버튼(전체선택).png" />
           </AllSelect>
           <Select>
             <Img src="images/버튼(수정).png" />
@@ -25,8 +32,10 @@ const RewardManagement = () => {
           </Select>
         </Button>
         <HeadImg src="images/Rectangle 11.png" />
+
         <RewardConHistory
           Check={CheckBox}
+          AllClick={allClick}
           headNumber="No."
           contents="내용"
           result="전송결과"
@@ -49,7 +58,7 @@ const Box = styled.div`
 const Button = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 80px;
+  margin-top: 50px;
 `;
 
 const AllSelect = styled.div`

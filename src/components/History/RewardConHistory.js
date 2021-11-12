@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import BOARD_DATA from './HistoryList/boardData';
 import RewardConList from './RewardConList';
 import DummyData from '../pagination/boardData';
 import Pagination from '../pagination';
@@ -11,6 +10,7 @@ const RewardConHistory = ({
   contents,
   transferNumber,
   days,
+  AllClick,
 }) => {
   const maxPostCount = 9;
   const [posts, setPosts] = useState(DummyData);
@@ -18,9 +18,11 @@ const RewardConHistory = ({
   const [totalPage, setTotalPage] = useState(
     parseInt(posts?.length / maxPostCount) + 1
   ); // 전체 페이지 수
+
   useEffect(() => {
     DivisionPage();
   }, [page]);
+
   const DivisionPage = () => {
     let postArray = [];
     let startPage = (page - 1) * 9;
@@ -57,14 +59,15 @@ const RewardConHistory = ({
         {posts.map(data => (
           <RewardConList
             key={data.id}
+            id={data.id}
             Check={Check}
-            all={Check}
             headNumber={data.id}
             contents={data.contents}
             transferNumber={data.transferNumber}
             // published={data.published}
             // result={data.result}
             days={data.days}
+            AllClick={AllClick}
           />
         ))}
       </Table>

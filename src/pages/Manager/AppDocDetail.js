@@ -6,38 +6,38 @@ import Title from '../../components/Title/Title';
 
 const AppDocDetail = () => {
   return (
-    <div
-      style={{
-        flex: 1,
-        marginLeft: 300,
-        marginTop: 80,
-      }}
-    >
+    <>
       <Title
         titleText="신청서류내역"
         categoryText="관리자 페이지 > 신청서류내역"
       />
       <div
         style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-around',
+          flex: 1,
+          marginLeft: 150,
         }}
       >
-        <div>
-          <TtileInput />
-          <ComInput />
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              marginLeft: 220,
-              marginTop: 12,
-            }}
-          >
-            날짜<div>기간 들어감 </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-around',
+          }}
+        >
+          <div>
+            <TtileInput />
+            <ComInput />
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                marginLeft: 220,
+                marginTop: 12,
+              }}
+            />
           </div>
+          <Btn1 text="검색" style={{ marginTop: 33 }} />
         </div>
         <Btn1 text="검색" style={{ marginTop: 33 }} />
       </div>
@@ -59,9 +59,9 @@ const AppDocDetail = () => {
           <BtnOrange2 text="삭제" />
           <BtnOrange2 text="중단" />
         </div>
+        <AddHistory Check="Check" style={{ marginLeft: 220, marginTop: 12 }} />
       </div>
-      <AddHistory Check="Check" style={{ marginLeft: 220, marginTop: 12 }} />
-    </div>
+    </>
   );
 };
 

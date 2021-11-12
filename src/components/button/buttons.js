@@ -11,6 +11,7 @@ export const Btn1 = props => {
         style={{
           minWidth: 193,
           minHeight: 40,
+          marginRight: 20,
           backgroundColor: '#FD7F36',
           borderRadius: 5,
           color: 'white',
@@ -55,7 +56,7 @@ export const BtnOrange1 = props => {
   console.log(text);
 
   return (
-    <Button
+    <button
       style={{
         minWidth: 77,
         minHeight: 30,
@@ -69,7 +70,7 @@ export const BtnOrange1 = props => {
       }}
     >
       {text}
-    </Button>
+    </button>
   );
 };
 
@@ -77,7 +78,7 @@ export const BtnOrange2 = props => {
   const { text, style } = props;
 
   return (
-    <Button
+    <button
       style={{
         minWidth: 50,
         minHeight: 30,
@@ -91,7 +92,7 @@ export const BtnOrange2 = props => {
       }}
     >
       {text}
-    </Button>
+    </button>
   );
 };
 
