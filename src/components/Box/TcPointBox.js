@@ -1,5 +1,4 @@
 import React from 'react';
-import { Btn2 } from '../button/buttons';
 import styled from 'styled-components';
 
 const TcPointBox = () => {
@@ -15,9 +14,6 @@ const TcPointBox = () => {
         marginTop: 33,
       }}
     >
-      <div style={{ fontSize: 16, fontWeight: 600 }}>기간설정</div>
-      <div>20-07-22 - 20-07-22 v</div>
-      <Btn2 text={'조회'} />
       <div
         style={{
           marginRight: 160,
