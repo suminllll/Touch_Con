@@ -120,9 +120,7 @@ const PageMove = styled.button`
   background-color: transparent;
 `;
 
-const Container = styled.div`
-  width: 1032px;
-`;
+const Container = styled.div``;
 
 const Table = styled.table`
   width: 1032px;
