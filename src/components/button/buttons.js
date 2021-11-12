@@ -16,7 +16,6 @@ export const Btn1 = props => {
           borderRadius: 5,
           color: 'white',
           fontWeight: 800,
-          // borderStyle: none,
           ...style,
         }}
       >
@@ -32,16 +31,39 @@ export const Btn2 = props => {
   console.log('Btn2', text);
 
   return (
+    <Button
+      style={{
+        minWidth: 139,
+        minHeight: 40,
+        backgroundColor: '#FD7F36',
+        borderRadius: 5,
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 800,
+        ...style,
+      }}
+    >
+      {text}
+    </Button>
+  );
+};
+
+export const BtnOrange1 = props => {
+  const { text, style } = props;
+  console.log(text);
+
+  return (
     <div>
       <Button
         style={{
-          minWidth: 139,
-          minHeight: 40,
-          backgroundColor: '#FD7F36',
+          minWidth: 77,
+          minHeight: 30,
+          marginRight: 5,
+          backgroundColor: '#FFFFFF',
           borderRadius: 5,
-          color: 'white',
+          border: '1px solid #FD7F36',
+          color: '#FD7F36',
           fontSize: 18,
-          fontWeight: 800,
           ...style,
         }}
       >
@@ -51,48 +73,27 @@ export const Btn2 = props => {
   );
 };
 
-export const BtnOrange1 = props => {
-  const { text, style } = props;
-  console.log(text);
-
-  return (
-    <button
-      style={{
-        minWidth: 77,
-        minHeight: 30,
-        backgroundColor: '#FFFFFF',
-        borderRadius: 5,
-        borderColor: '#FD7F36',
-        color: '#FD7F36',
-        fontSize: 18,
-        fontWeight: 800,
-        ...style,
-      }}
-    >
-      {text}
-    </button>
-  );
-};
-
 export const BtnOrange2 = props => {
   const { text, style } = props;
 
   return (
-    <button
-      style={{
-        minWidth: 50,
-        minHeight: 30,
-        backgroundColor: '#FFFFFF',
-        borderRadius: 5,
-        borderColor: '#FD7F36',
-        color: '#FD7F36',
-        fontSize: 18,
-        fontWeight: 800,
-        ...style,
-      }}
-    >
-      {text}
-    </button>
+    <div>
+      <Button
+        style={{
+          minWidth: 50,
+          minHeight: 30,
+          marginRight: 5,
+          backgroundColor: '#FFFFFF',
+          borderRadius: 5,
+          border: '1px solid #FD7F36',
+          color: '#FD7F36',
+          fontSize: 18,
+          ...style,
+        }}
+      >
+        {text}
+      </Button>
+    </div>
   );
 };
 

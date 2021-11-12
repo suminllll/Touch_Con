@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Btn1, BtnOrange1, BtnOrange2 } from '../../components/button/buttons';
 import AddHistory from '../../components/History/AddHistory';
 import { ComInput, TtileInput } from '../../components/Input/Inputs';
 import Title from '../../components/Title/Title';
 
 const AppDocDetail = () => {
+  const [allClick, setAllClick] = useState(false);
+
+  const handleAllClick = () => {
+    setAllClick(!allClick);
+  };
+
   return (
     <>
       <Title
@@ -13,7 +19,6 @@ const AppDocDetail = () => {
       />
       <div
         style={{
-          flex: 1,
           marginLeft: 150,
         }}
       >
@@ -39,27 +44,37 @@ const AppDocDetail = () => {
           </div>
           <Btn1 text="검색" style={{ marginTop: 33 }} />
         </div>
-        <Btn1 text="검색" style={{ marginTop: 33 }} />
       </div>
       <div
         style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          marginRight: 130,
+          // display: 'flex',
+          // flexDirection: 'row',
+          // justifyContent: 'column',
+          // marginRight: 130,
+          marginLeft: 200,
           marginTop: 40,
         }}
       >
-        <BtnOrange1
-          text="전체선택"
-          style={{ marginLeft: 220, marginTop: 12 }}
-        />
-        <div>
-          <BtnOrange1 text="승인완료" />
-          <BtnOrange2 text="삭제" />
-          <BtnOrange2 text="중단" />
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div onClick={handleAllClick}>
+            <BtnOrange1
+              text="전체선택"
+              style={{ marginLeft: 170, marginTop: 12 }}
+            />
+          </div>
+
+          <div style={{ display: 'flex', marginRight: 43, marginTop: 12 }}>
+            <BtnOrange1 text="승인완료" />
+            <BtnOrange2 text="삭제" />
+            <BtnOrange2 text="중단" />
+          </div>
         </div>
-        <AddHistory Check="Check" style={{ marginLeft: 220, marginTop: 12 }} />
+
+        <AddHistory
+          AllClick={allClick}
+          Check="Check"
+          style={{ marginLeft: 170, marginTop: 12 }}
+        />
       </div>
     </>
   );

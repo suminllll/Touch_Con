@@ -122,7 +122,8 @@ const CheckTd = styled(HeadTd)`
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin: 50px 300px 0px 0px;
+  margin: 50px 0;
+  bottom: 0;
 `;
 
 const PageMove = styled.button`

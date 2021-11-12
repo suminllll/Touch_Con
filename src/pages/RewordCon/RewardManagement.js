@@ -50,7 +50,7 @@ const Section = styled.div`
 `;
 
 const Box = styled.div`
-  margin-left: 400px;
+  margin-left: 23vw;
 `;
 
 const Button = styled.div`

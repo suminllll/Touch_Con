@@ -136,7 +136,8 @@ const CheckTd = styled(HeadTd)`
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin: 50px 0;
+  bottom: 0;
 `;
 const PageMove = styled.button`
   font-family: Work Sans;

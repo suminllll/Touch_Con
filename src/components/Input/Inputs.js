@@ -20,11 +20,10 @@ export const TtileInput = () => {
       </span>
       <input
         style={{
-          minWidth: 537,
+          minWidth: 700,
           height: 28,
           border: '1px solid lightgray',
           borderRadius: 3,
-          minWidth: 700,
         }}
         onChange={textHandle}
         value={text}
@@ -48,11 +47,10 @@ export const ComInput = () => {
       </span>
       <input
         style={{
-          minWidth: 537,
+          minWidth: 700,
           height: 28,
           border: '1px solid lightgray',
           borderRadius: 3,
-          minWidth: 700,
         }}
         onChange={textHandle}
         value={text}
