@@ -74,10 +74,12 @@ const TitleInputBox = styled(InputBox)`
   min-width: 64vw;
 `;
 
-const RegisterInput = styled(InputBox)`
+const RegisterInput = styled.textarea`
   min-height: 50vh;
   min-width: 67.5vw;
+  padding: 20px;
 `;
+
 const ButtonWrap = styled.div`
   display: flex;
   justify-content: space-between;
