@@ -58,7 +58,7 @@ const RewardKeep = () => {
               maxWidth: 1240,
               gridTemplateColumns: '0fr 0fr 0fr 0fr 0fr',
               gridTemplateRows: '2fr',
-              marginLeft: 300,
+              marginLeft: 400,
               gap: 20,
               marginBottom: 30,
             }}

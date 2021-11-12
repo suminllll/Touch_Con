@@ -5,6 +5,7 @@ import { SendDate } from '../../components/Select/SendDate';
 import Title from '../../components/Title/Title';
 import RewardConHistory from '../../components/History/RewardConHistory';
 import styled from 'styled-components';
+
 const RewardTh = () => {
   //전송내역
   return (
@@ -18,7 +19,7 @@ const RewardTh = () => {
       <div
         style={{
           flex: 1,
-          marginLeft: 170,
+          marginLeft: 250,
         }}
       >
         <div
@@ -52,8 +53,7 @@ const HeadImg = styled.img`
 `;
 
 const Box = styled.div`
-  margin-top: 100px;
-  margin-left: 360px;
+  margin: 100px 0px 150px 400px;
 `;
 
 export default RewardTh;

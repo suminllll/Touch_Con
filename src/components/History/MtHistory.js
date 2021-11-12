@@ -62,7 +62,7 @@ const MtHistory = ({ style }) => {
           <HeadTd>사용</HeadTd>
           <HeadTd>날짜</HeadTd>
         </HeadTr>
-        {BOARD_DATA.map(data => (
+        {posts.map(data => (
           <HistoryList
             key={data.id}
             headNumber={data.id}
@@ -102,12 +102,10 @@ const MtHistory = ({ style }) => {
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin: 50px 300px 0px 0px;
 `;
 
 const PageMove = styled.button`
-  font-family: Work Sans;
-  font-style: normal;
   font-weight: 600;
   font-size: 13px;
   line-height: 15px;
@@ -119,11 +117,11 @@ const PageMove = styled.button`
 `;
 
 const Container = styled.div`
-  width: 1032px;
+  min-width: 1032px;
 `;
 
 const Table = styled.table`
-  width: 1190px;
+  min-width: 1190px;
   text-align: center;
   border: 1px solid #dddddd;
 `;

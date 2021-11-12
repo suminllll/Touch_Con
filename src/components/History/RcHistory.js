@@ -65,7 +65,7 @@ const RcHistory = ({ style }) => {
           <HeadTd>전송</HeadTd>
           <HeadTd>날짜</HeadTd>
         </HeadTr>
-        {BOARD_DATA.map(data => (
+        {posts.map(data => (
           <HistoryList
             key={data.id}
             headNumber={data.id}

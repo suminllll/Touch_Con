@@ -6,13 +6,11 @@ import CheckBox from '../../components/CheckBox/CheckBox';
 import { useState } from 'react/cjs/react.development';
 
 const RewardManagement = () => {
+  //리워드콘 관리
   const [allClick, setAllClick] = useState(false);
-
   const handleAllClick = () => {
     setAllClick(!allClick);
   };
-
-  //리워드콘 관리
 
   return (
     <Section>
@@ -52,7 +50,7 @@ const Section = styled.div`
 `;
 
 const Box = styled.div`
-  margin-left: 360px;
+  margin-left: 400px;
 `;
 
 const Button = styled.div`

@@ -72,7 +72,7 @@ const Article = styled.article`
 const AdminText = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 210px 10px 170px;
 `;
 
