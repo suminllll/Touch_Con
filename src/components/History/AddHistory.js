@@ -55,7 +55,7 @@ const AddHistory = ({ Check, style }) => {
                 height: 45,
                 background: '#FD7F36',
               }}
-            ></div>
+            />
             No.
           </HeadTd>
           <CheckTd Check={Check} />
