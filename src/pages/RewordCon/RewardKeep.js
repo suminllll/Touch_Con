@@ -55,11 +55,10 @@ const RewardKeep = () => {
           <div
             style={{
               display: 'grid',
-              width: '90%',
               maxWidth: 1240,
-              gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
+              gridTemplateColumns: '0fr 0fr 0fr 0fr 0fr',
               gridTemplateRows: '2fr',
-              marginLeft: 200,
+              marginLeft: 300,
               gap: 20,
               marginBottom: 30,
             }}
@@ -75,7 +74,7 @@ const RewardKeep = () => {
                 src={data.img}
                 style={{
                   width: 165,
-                  height: 350,
+                  height: 256,
                 }}
               />
             ))}

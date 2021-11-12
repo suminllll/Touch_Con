@@ -32,7 +32,7 @@ const RewardTh = () => {
             <TtileInput />
             <SendDate />
           </div>
-          <Btn1 text="검색" style={{ marginLeft: 145, marginTop: 70 }} />
+          <Btn1 text="검색" style={{ marginLeft: 250, marginTop: 30 }} />
         </div>
       </div>
       <Box>

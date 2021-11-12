@@ -17,12 +17,14 @@ const TcPointBox = () => {
     >
       <div style={{ fontSize: 16, fontWeight: 600 }}>기간설정</div>
       <div>20-07-22 - 20-07-22 v</div>
-      <Btn2 text={'조회'} />
+      <Btn2 text="조회" />
       <div
-        style={{
-          marginRight: 160,
-          minwidth: 332,
-        }}
+        style={
+          {
+            // marginRight: 160,
+            // minwidth: 332,
+          }
+        }
       >
         <RightDiv>
           <div style={{ fontSize: 14, fontWeight: 600 }}>
@@ -43,7 +45,7 @@ const TcPointBox = () => {
 
         <RightDiv>
           <div style={{ fontSize: 14, fontWeight: 600 }}>
-            사요한 터치 포인트 수량
+            사용한 터치 포인트 수량
           </div>
           <div
             style={{
@@ -62,10 +64,8 @@ const TcPointBox = () => {
   );
 };
 
-export default TcPointBox;
-
 const RightDiv = styled.div`
   display: flex;
-  flexdirection: row;
-  justifycontent: space-between;
 `;
+
+export default TcPointBox;
