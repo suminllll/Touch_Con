@@ -17,7 +17,7 @@ const IhTouchPoint = () => {
           marginLeft: 185,
         }}
       >
-        <TextBox />
+        <TextBox style={{ marginLeft: 210, marginTop: 20 }} />
         <TcPointBox />
         <MtHistory style={{ marginLeft: 175, marginTop: 93 }} />
       </div>

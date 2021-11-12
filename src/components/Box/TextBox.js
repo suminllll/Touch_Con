@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const TextBox = () => {
+const TextBox = ({ style }) => {
   const [point, setPoint] = useState(120000);
 
   return (
@@ -10,13 +10,12 @@ const TextBox = () => {
         borderStyle: 'solid',
         borderColor: '#c4c4c4',
         minHeight: 100,
-        marginTop: 17,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
         width: 1200,
-        marginLeft: 175,
+        ...style,
       }}
     >
       <div style={{ marginLeft: 298, fontSize: 16, fontWeight: 600 }}>

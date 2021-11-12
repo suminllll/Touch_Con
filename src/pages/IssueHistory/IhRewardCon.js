@@ -14,7 +14,7 @@ const IhRewardCon = () => {
           marginLeft: 185,
         }}
       >
-        <TextBox />
+        <TextBox style={{ marginLeft: 210, marginTop: 20 }} />
         <TcPointBox />
         <RcHistory style={{ marginLeft: 175, marginTop: 93 }} />
       </div>

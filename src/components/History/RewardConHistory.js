@@ -11,6 +11,7 @@ const RewardConHistory = ({
   transferNumber,
   days,
   AllClick,
+  style,
 }) => {
   const maxPostCount = 9;
   const [posts, setPosts] = useState(DummyData);
@@ -45,7 +46,7 @@ const RewardConHistory = ({
     }
   };
   return (
-    <Container>
+    <Container style={{ ...style }}>
       <Table>
         <HeadTr>
           <CheckTd Check={Check} />
@@ -64,9 +65,8 @@ const RewardConHistory = ({
             headNumber={data.id}
             contents={data.contents}
             transferNumber={data.transferNumber}
-            // published={data.published}
-            // result={data.result}
-            days={data.days}
+            published={data.published}
+            result={data.result}
             AllClick={AllClick}
           />
         ))}
@@ -122,7 +122,9 @@ const CheckTd = styled(HeadTd)`
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 30px;
+  position: relative;
+  left: -100px;
 `;
 const PageMove = styled.button`
   font-family: Work Sans;

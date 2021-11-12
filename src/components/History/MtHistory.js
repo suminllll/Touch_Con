@@ -39,24 +39,10 @@ const MtHistory = ({ style }) => {
   };
   return (
     <Container style={{ ...style }}>
+      <HeadImg src="images/Rectangle 11.png" />
       <Table>
         <HeadTr>
-          <HeadTd
-            style={{
-              display: 'flex',
-              flexdirection: 'row',
-              alignItems: 'center',
-            }}
-          >
-            <div
-              style={{
-                width: 10,
-                height: 45,
-                background: '#FD7F36',
-              }}
-            />
-            No.
-          </HeadTd>
+          <HeadTd>No.</HeadTd>
           <HeadTd>내용</HeadTd>
           <HeadTd>발행</HeadTd>
           <HeadTd>사용</HeadTd>
@@ -103,6 +89,7 @@ const PageContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 100px;
+  margin-left: 50px;
 `;
 
 const PageMove = styled.button`
@@ -136,6 +123,10 @@ const HeadTr = styled.tr`
 
 const HeadTd = styled.td`
   vertical-align: middle;
+`;
+
+const HeadImg = styled.img`
+  position: absolute;
 `;
 
 export default MtHistory;

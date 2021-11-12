@@ -1,7 +1,6 @@
 import React from 'react';
 import Title from '../../components/Title/Title';
 import { TtileInput } from '../../components/Input/Inputs';
-import { SendDate } from '../../components/Select/SendDate';
 import styled from 'styled-components';
 import { Btn1 } from '../../components/button/buttons';
 import History from '../../components/History/History';
@@ -27,7 +26,6 @@ const RewardCh = () => {
         >
           <div>
             <TtileInput />
-            <SendDate />
           </div>
           <Btn1 text="검색" style={{ marginLeft: 250, marginTop: 30 }} />
         </div>

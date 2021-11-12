@@ -42,24 +42,10 @@ const RcHistory = ({ style }) => {
 
   return (
     <Container style={{ ...style }}>
+      <HeadImg src="images/Rectangle 11.png" />
       <Table>
         <HeadTr>
-          <HeadTd
-            style={{
-              display: 'flex',
-              flexdirection: 'row',
-              alignItems: 'center',
-            }}
-          >
-            <div
-              style={{
-                width: 10,
-                height: 45,
-                background: '#FD7F36',
-              }}
-            />
-            No.
-          </HeadTd>
+          <HeadTd> No.</HeadTd>
           <HeadTd>내용</HeadTd>
           <HeadTd>생성</HeadTd>
           <HeadTd>전송</HeadTd>
@@ -138,4 +124,7 @@ const HeadTd = styled.td`
   vertical-align: middle;
 `;
 
+const HeadImg = styled.img`
+  position: absolute;
+`;
 export default RcHistory;

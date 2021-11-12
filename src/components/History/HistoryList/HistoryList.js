@@ -25,12 +25,12 @@ const HistoryList = ({
         <BodyTd contents>{contents}</BodyTd>
         <BodyTd published>{published}</BodyTd>
         <BodyTd days>{days}</BodyTd>
-        {/* <BodyTd transferNumber>{transferNumber}</BodyTd> */}
-        {/* <BodyTd companyName>{companyName}</BodyTd> */}
-        {/* <BodyTd points>{points}</BodyTd> */}
-        {/* <BodyTd produced>{produced}</BodyTd> */}
-        {/* <BodyTd use>{use}</BodyTd> */}
-        {/* <BodyTd result>{result}</BodyTd> */}
+        <BodyTd transferNumber>{transferNumber}</BodyTd>
+        <BodyTd companyName>{companyName}</BodyTd>
+        <BodyTd points>{points}</BodyTd>
+        <BodyTd produced>{produced}</BodyTd>
+        <BodyTd use>{use}</BodyTd>
+        <BodyTd result>{result}</BodyTd>
       </BodyTr>
     </tbody>
   );
