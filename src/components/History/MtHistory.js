@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import HistoryList from './HistoryList/HistoryList';
 import BOARD_DATA from './HistoryList/boardData';
 import Pagination from '../pagination';
 import DummyData from '../pagination/boardData';
+import MtHistoryList from './HistoryList/MtHistoryList';
 
 const MtHistory = ({ style }) => {
   const maxPostCount = 9;
@@ -30,7 +30,7 @@ const MtHistory = ({ style }) => {
     setPosts(postArry);
   };
   const onClickPageHandler = (e, code) => {
-    e.prevenDefault();
+    e.preventDefault();
     if (code === 'back') {
       setPage(page - 1);
     } else {
@@ -47,13 +47,14 @@ const MtHistory = ({ style }) => {
           <HeadTd>사용</HeadTd>
           <HeadTd>날짜</HeadTd>
         </HeadTr>
-        {BOARD_DATA.map(data => (
-          <HistoryList
+        {posts.map(data => (
+          <MtHistoryList
             key={data.id}
             headNumber={data.id}
             contents={data.contents}
-            number={data.number}
-            day={data.day}
+            published={data.published}
+            use={data.use}
+            days={data.days}
           />
         ))}
       </Table>
