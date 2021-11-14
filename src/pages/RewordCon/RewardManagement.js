@@ -4,6 +4,7 @@ import RewardConHistory from '../../components/History/RewardConHistory';
 import Title from '../../components/Title/Title';
 import CheckBox from '../../components/CheckBox/CheckBox';
 import { useState } from 'react/cjs/react.development';
+import { BtnOrange1, BtnOrange2 } from '../../components/button/buttons';
 
 const RewardManagement = () => {
   const [allClick, setAllClick] = useState(false);
@@ -20,24 +21,27 @@ const RewardManagement = () => {
         categoryText="리워드콘 > 리워드콘 관리"
       />
       <Box>
-        <Button>
-          <AllSelect>
-            <Img onClick={handleAllClick} src="images/버튼(전체선택).png" />
-          </AllSelect>
-          <Select>
-            <Img src="images/버튼(수정).png" />
-            <Img src="images/버튼(삭제).png" />
-            <Img src="images/버튼(중단).png" />
-          </Select>
-        </Button>
-        <HeadImg src="images/Rectangle 11.png" />
-
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginTop: 40,
+            width: 1250,
+          }}
+        >
+          <BtnOrange1 text="전체선택" style={{ marginTop: 12 }} />
+          <div>
+            <BtnOrange2 text="수정" />
+            <BtnOrange2 text="삭제" />
+            <BtnOrange2 text="중단" />
+          </div>
+        </div>
         <RewardConHistory
           Check={CheckBox}
           AllClick={allClick}
           headNumber="No."
           contents="내용"
-          result="전송결과"
           transferNumber="전송갯수"
           days="전송일"
         />

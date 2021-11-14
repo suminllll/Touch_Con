@@ -66,9 +66,7 @@ const RewardConHistory = ({
             contents={data.contents}
             transferNumber={data.transferNumber}
             // published={data.published}
-            result={data.result}
             days={data.days}
-            AllClick={AllClick}
           />
         ))}
       </Table>

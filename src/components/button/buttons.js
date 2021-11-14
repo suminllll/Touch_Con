@@ -14,6 +14,7 @@ export const Btn1 = props => {
           backgroundColor: '#FD7F36',
           borderRadius: 5,
           color: 'white',
+          cursor: 'pointer',
           ...style,
         }}
       >
@@ -38,6 +39,7 @@ export const Btn2 = props => {
           borderRadius: 5,
           color: 'white',
           fontSize: 18,
+          cursor: 'pointer',
           ...style,
         }}
       >
@@ -63,6 +65,7 @@ export const BtnOrange1 = props => {
         borderColor: '#FD7F36',
         color: '#FD7F36',
         fontSize: 18,
+        cursor: 'pointer',
         ...style,
       }}
     >
@@ -84,6 +87,7 @@ export const BtnOrange2 = props => {
         borderColor: '#FD7F36',
         color: '#FD7F36',
         fontSize: 18,
+        cursor: 'pointer',
         ...style,
       }}
     >
