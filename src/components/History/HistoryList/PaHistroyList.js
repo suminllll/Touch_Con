@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CheckBox from '../../CheckBox/CheckBox';
 
-const HistoryList = ({
+const PaHistoryList = ({
   Check,
   headNumber,
   contents,
@@ -23,7 +23,7 @@ const HistoryList = ({
         </CheckTd>
         <BodyTd headNumber>{headNumber}</BodyTd>
         <BodyTd companyName>{companyName}</BodyTd>
-        <BodyTd contents>{contents}</BodyTd>
+        <BodyTd points>{points}</BodyTd>
         <BodyTd days>{days}</BodyTd>
         {/* <BodyTd transferNumber>{transferNumber}</BodyTd> */}
         {/* <BodyTd companyName>{companyName}</BodyTd> */}
@@ -52,4 +52,4 @@ const CheckTd = styled(BodyTd)`
   display: ${props => (props.Check ? '"";' : 'none;')};
 `;
 
-export default HistoryList;
+export default PaHistoryList;
