@@ -61,7 +61,6 @@ const History = ({
             contents={data.contents}
             transferNumber={data.transferNumber}
             days={data.days}
-            published={data.published}
             // companyName={data.companyName}
             // points={data.points}
             // produced={data.produced}

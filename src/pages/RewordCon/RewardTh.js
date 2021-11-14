@@ -34,11 +34,11 @@ const RewardTh = () => {
         </div>
       </div>
       <Box>
-        <HeadImg src="images/Rectangle 11.png" />
         <RewardConHistory
           headNumber="No."
           contents="내용"
           transferNumber="전송갯수"
+          result="전송결과"
           days="전송일"
         />
       </Box>

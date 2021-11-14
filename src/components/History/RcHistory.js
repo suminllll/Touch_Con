@@ -62,7 +62,7 @@ const RcHistory = ({ style }) => {
       </Table>
       <PageContainer>
         <PageMove
-          style={{ marginLeft: 63 }}
+          style={{ marginRight: 63 }}
           onClick={e => {
             onClickPageHandler(e, 'back');
           }}
@@ -72,7 +72,7 @@ const RcHistory = ({ style }) => {
         </PageMove>
         <Pagination page={page} totalPage={totalPage} setPage={setPage} />
         <PageMove
-          style={{ marginRight: 55 }}
+          style={{ marginLeft: 55 }}
           onClick={e => {
             onClickPageHandler(e, 'back');
           }}
@@ -88,7 +88,7 @@ const RcHistory = ({ style }) => {
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
 `;
 const PageMove = styled.button`
   font-family: Work Sans;
