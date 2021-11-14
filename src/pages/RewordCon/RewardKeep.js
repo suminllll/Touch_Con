@@ -64,10 +64,6 @@ const RewardKeep = () => {
               marginBottom: 30,
             }}
           >
-            {console.log(posts)}
-            {/* {posts.map(data => (
-              <img src={require(data.img).default} />
-            ))} */}
             {posts.map(data => (
               <img
                 key={data.id}

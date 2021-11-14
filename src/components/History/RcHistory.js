@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import HistoryList from './HistoryList/HistoryList';
-import BOARD_DATA from './HistoryList/boardData';
 import Pagination from '../pagination';
 import DummyData from '../pagination/boardData';
+import RcHistoryList from './HistoryList/RcHistoryList';
 
 const RcHistory = ({ style }) => {
   const maxPostCount = 9;
@@ -44,40 +43,26 @@ const RcHistory = ({ style }) => {
     <Container style={{ ...style }}>
       <Table>
         <HeadTr>
-          <HeadTd
-            style={{
-              display: 'flex',
-              flexdirection: 'row',
-              alignItems: 'center',
-            }}
-          >
-            <div
-              style={{
-                width: 10,
-                height: 45,
-                background: '#FD7F36',
-              }}
-            />
-            No.
-          </HeadTd>
+          <HeadTd> No.</HeadTd>
           <HeadTd>내용</HeadTd>
           <HeadTd>생성</HeadTd>
           <HeadTd>전송</HeadTd>
           <HeadTd>날짜</HeadTd>
         </HeadTr>
-        {BOARD_DATA.map(data => (
-          <HistoryList
+        {posts.map(data => (
+          <RcHistoryList
             key={data.id}
             headNumber={data.id}
             contents={data.contents}
-            number={data.number}
-            day={data.day}
+            create={data.create}
+            send={data.send}
+            days={data.days}
           />
         ))}
       </Table>
       <PageContainer>
         <PageMove
-          style={{ marginLeft: 63 }}
+          style={{ marginRight: 63 }}
           onClick={e => {
             onClickPageHandler(e, 'back');
           }}
@@ -87,7 +72,7 @@ const RcHistory = ({ style }) => {
         </PageMove>
         <Pagination page={page} totalPage={totalPage} setPage={setPage} />
         <PageMove
-          style={{ marginRight: 55 }}
+          style={{ marginLeft: 55 }}
           onClick={e => {
             onClickPageHandler(e, 'back');
           }}
@@ -103,7 +88,7 @@ const RcHistory = ({ style }) => {
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
 `;
 const PageMove = styled.button`
   font-family: Work Sans;

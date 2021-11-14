@@ -10,19 +10,19 @@ const RewardConList = ({
   days,
   published,
   result,
+  AllClick,
 }) => {
   return (
     <tbody>
       <BodyTr>
         <CheckTd Check={Check}>
-          <CheckBox />
+          <CheckBox AllClick={AllClick} />
         </CheckTd>
         <BodyTd>{headNumber}</BodyTd>
         <BodyTd>{contents}</BodyTd>
         <BodyTd>{transferNumber}</BodyTd>
-        <BodyTd>{days}</BodyTd>
-        <BodyTd published>{published}</BodyTd>
         <BodyTd result>{result}</BodyTd>
+        <BodyTd>{days}</BodyTd>
       </BodyTr>
     </tbody>
   );
@@ -41,7 +41,7 @@ const BodyTd = styled.td`
 `;
 
 const CheckTd = styled(BodyTd)`
-  display: ${props => (props.Check ? '"";' : 'none;')};
+  display: ${props => (props.Check ? '""' : 'none')};
 `;
 
 export default RewardConList;

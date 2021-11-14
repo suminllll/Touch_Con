@@ -1,48 +1,40 @@
 import React from 'react';
-import { useState } from 'react/cjs/react.development';
+import { useState, useEffect } from 'react/cjs/react.development';
 import styled from 'styled-components';
 
-const CheckBox = () => {
+const CheckBox = ({ AllClick }) => {
   const [checkToggle, setCheckToggle] = useState(false);
+
   const checkBox = () => {
-    setCheckToggle(checkToggle => !checkToggle);
+    setCheckToggle(!checkToggle);
   };
-  // console.log(checkToggle);
+
+  useEffect(() => {
+    setCheckToggle(AllClick);
+  }, [AllClick]);
+
   return (
-    <Agree>
-      <AgreeBox>
-        <Box onClick={checkBox} src="images/checkbox.png" />
-        <Check
-          onClick={checkBox}
-          className={checkToggle ? 'active' : 'hide'}
-          src="images/check.png"
-        />
-      </AgreeBox>
-    </Agree>
+    <AgreeBox>
+      <img onClick={checkBox} alt="checkBox" src="images/checkbox.png" />
+      <Check
+        onClick={checkBox}
+        check={checkToggle}
+        alt="checkBoxInCheck"
+        src="images/check.png"
+      />
+    </AgreeBox>
   );
 };
 
-const Agree = styled.div``;
-
-const Box = styled.img`
-  /* position: absolute;
-  left: 450px;
-  bottom: 0px; */
-`;
-
 const Check = styled.img`
   position: absolute;
+  display: ${props => (props.check ? '""' : 'none;')};
 `;
 
 const AgreeBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  .active {
-  }
-  .hide {
-    display: none;
-  }
 `;
 
 export default CheckBox;

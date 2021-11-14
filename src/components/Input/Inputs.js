@@ -9,9 +9,26 @@ export const TtileInput = () => {
   };
 
   return (
-    <div style={{ marginLeft: 220, marginTop: 56 }}>
-      <span style={{ marginRight: 31 }}>제목</span>
-      <input style={{ minWidth: 537 }} onChange={textHandle} value={text} />
+    <div style={{ marginLeft: 200, marginTop: 54 }}>
+      <span
+        style={{
+          marginRight: 31,
+          fontWeight: 800,
+        }}
+      >
+        제목
+      </span>
+      <input
+        style={{
+          minWidth: 537,
+          height: 28,
+          border: '1px solid lightgray',
+          borderRadius: 3,
+          minWidth: 700,
+        }}
+        onChange={textHandle}
+        value={text}
+      />
     </div>
   );
 };
@@ -25,9 +42,21 @@ export const ComInput = () => {
   };
 
   return (
-    <div style={{ marginLeft: 220, marginTop: 12 }}>
-      <span style={{ marginRight: 31 }}>기업명</span>
-      <input style={{ minWidth: 537 }} onChange={textHandle} value={text} />
+    <div style={{ marginLeft: 200, marginTop: 12 }}>
+      <span style={{ marginRight: 31, marginLeft: -10, fontWeight: 800 }}>
+        기업명
+      </span>
+      <input
+        style={{
+          minWidth: 537,
+          height: 28,
+          border: '1px solid lightgray',
+          borderRadius: 3,
+          minWidth: 700,
+        }}
+        onChange={textHandle}
+        value={text}
+      />
     </div>
   );
 };

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import HistoryList from './HistoryList/HistoryList';
-import BOARD_DATA from './HistoryList/boardData';
 import DummyData from '../pagination/boardData';
 import Pagination from '../pagination';
+import AddHistoryList from './HistoryList/AddHistoryList';
 
 const AddHistory = ({ Check, style }) => {
   const maxPostCount = 7;
-  const [posts, setPosts] = useState(BOARD_DATA);
+  const [posts, setPosts] = useState(DummyData);
   const [page, setPage] = useState(1); // 현재 페이지
   const [totalPage, setTotalPage] = useState(
     parseInt(posts?.length / maxPostCount) + 1
@@ -42,22 +41,6 @@ const AddHistory = ({ Check, style }) => {
     <Container style={{ ...style }}>
       <Table>
         <HeadTr>
-          <HeadTd
-            style={{
-              display: 'flex',
-              flexdirection: 'row',
-              alignItems: 'center',
-            }}
-          >
-            <div
-              style={{
-                width: 10,
-                height: 45,
-                background: '#FD7F36',
-              }}
-            ></div>
-            No.
-          </HeadTd>
           <CheckTd Check={Check} />
           <HeadTd>No.</HeadTd>
           <HeadTd>기업명</HeadTd>
@@ -66,12 +49,13 @@ const AddHistory = ({ Check, style }) => {
           <HeadTd>전송일</HeadTd>
         </HeadTr>
         {posts.map(data => (
-          <HistoryList
+          <AddHistoryList
             key={data.id}
             headNumber={data.id}
+            companyName={data.companyName}
             contents={data.contents}
-            number={data.number}
-            day={data.day}
+            result={data.result}
+            days={data.days}
             Check={Check}
           />
         ))}
@@ -125,9 +109,9 @@ const Container = styled.div`
 `;
 
 const Table = styled.table`
-  width: 1032px;
   text-align: center;
   border: 1px solid #dddddd;
+  width: 1180px;
 `;
 
 const HeadTr = styled.tr`
