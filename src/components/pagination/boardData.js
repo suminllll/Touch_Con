@@ -13,6 +13,8 @@ const DummyData = [
     result: '전송성공',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 2,
@@ -28,6 +30,8 @@ const DummyData = [
     result: '전송성공',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 3,
@@ -43,6 +47,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 4,
@@ -58,6 +64,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 5,
@@ -73,6 +81,8 @@ const DummyData = [
     result: '전송성공',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 6,
@@ -88,6 +98,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 7,
@@ -103,6 +115,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 10,
@@ -118,6 +132,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 11,
@@ -133,6 +149,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 12,
@@ -148,6 +166,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 13,
@@ -163,6 +183,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 14,
@@ -178,6 +200,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 15,
@@ -193,6 +217,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 16,
@@ -208,6 +234,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 17,
@@ -223,6 +251,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 18,
@@ -238,6 +268,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 19,
@@ -253,6 +285,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 20,
@@ -268,6 +302,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
   {
     id: 21,
@@ -283,6 +319,8 @@ const DummyData = [
     result: '전송실패',
     writer: 'admin',
     title: '공지내용',
+    create: '400',
+    send: '2,400',
   },
 ];
 
