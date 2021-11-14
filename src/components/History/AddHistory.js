@@ -42,22 +42,6 @@ const AddHistory = ({ Check, style }) => {
     <Container style={{ ...style }}>
       <Table>
         <HeadTr>
-          <HeadTd
-            style={{
-              display: 'flex',
-              flexdirection: 'row',
-              alignItems: 'center',
-            }}
-          >
-            <div
-              style={{
-                width: 10,
-                height: 45,
-                background: '#FD7F36',
-              }}
-            />
-            No.
-          </HeadTd>
           <CheckTd Check={Check} />
           <HeadTd>No.</HeadTd>
           <HeadTd>기업명</HeadTd>
@@ -69,6 +53,7 @@ const AddHistory = ({ Check, style }) => {
           <HistoryList
             key={data.id}
             headNumber={data.id}
+            companyName={data.companyName}
             contents={data.contents}
             number={data.number}
             day={data.day}
@@ -125,9 +110,9 @@ const Container = styled.div`
 `;
 
 const Table = styled.table`
-  width: 1032px;
   text-align: center;
   border: 1px solid #dddddd;
+  width: 1180px;
 `;
 
 const HeadTr = styled.tr`

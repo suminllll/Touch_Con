@@ -16,11 +16,13 @@ const TcPointBox = () => {
     >
       <div
         style={{
-          marginRight: 160,
-          minwidth: 332,
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          margin: 'auto',
         }}
       >
-        <RightDiv>
+        <RightDiv style={{ marginRight: 105 }}>
           <div style={{ fontSize: 14, fontWeight: 600 }}>
             총발행된 터치 포인트 수량
           </div>
@@ -37,7 +39,17 @@ const TcPointBox = () => {
           <div style={{ fontSize: 14, fontWeight: 600 }}>(touch/point)</div>
         </RightDiv>
 
-        <RightDiv>
+        <div
+          style={{
+            width: 2,
+            height: 20,
+            left: 869,
+            top: 331,
+            background: '#EE7E24',
+          }}
+        ></div>
+
+        <RightDiv style={{ marginLeft: 105 }}>
           <div style={{ fontSize: 14, fontWeight: 600 }}>
             사요한 터치 포인트 수량
           </div>

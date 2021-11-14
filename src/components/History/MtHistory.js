@@ -41,22 +41,7 @@ const MtHistory = ({ style }) => {
     <Container style={{ ...style }}>
       <Table>
         <HeadTr>
-          <HeadTd
-            style={{
-              display: 'flex',
-              flexdirection: 'row',
-              alignItems: 'center',
-            }}
-          >
-            <div
-              style={{
-                width: 10,
-                height: 45,
-                background: '#FD7F36',
-              }}
-            />
-            No.
-          </HeadTd>
+          <HeadTd>No.</HeadTd>
           <HeadTd>내용</HeadTd>
           <HeadTd>발행</HeadTd>
           <HeadTd>사용</HeadTd>

@@ -14,7 +14,8 @@ const AppDocDetail = () => {
       <div
         style={{
           flex: 1,
-          marginLeft: 150,
+          marginLeft: 300,
+          maxWidth: 1280,
         }}
       >
         <div
@@ -44,13 +45,12 @@ const AppDocDetail = () => {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
-            marginRight: 130,
             marginTop: 40,
           }}
         >
           <BtnOrange1
             text="전체선택"
-            style={{ marginLeft: 220, marginTop: 12 }}
+            style={{ marginLeft: 100, marginTop: 12 }}
           />
           <div>
             <BtnOrange1 text="승인완료" />
@@ -58,7 +58,7 @@ const AppDocDetail = () => {
             <BtnOrange2 text="중단" />
           </div>
         </div>
-        <AddHistory Check="Check" style={{ marginLeft: 220, marginTop: 12 }} />
+        <AddHistory Check="Check" style={{ marginLeft: 100, marginTop: 12 }} />
       </div>
     </>
   );

@@ -22,6 +22,7 @@ const HistoryList = ({
           <CheckBox />
         </CheckTd>
         <BodyTd headNumber>{headNumber}</BodyTd>
+        <BodyTd companyName>{companyName}</BodyTd>
         <BodyTd contents>{contents}</BodyTd>
         <BodyTd published>{published}</BodyTd>
         <BodyTd days>{days}</BodyTd>
