@@ -11,6 +11,7 @@ const RewardConHistory = ({
   transferNumber,
   days,
   AllClick,
+  style,
   result,
 }) => {
   const maxPostCount = 9;
@@ -65,8 +66,9 @@ const RewardConHistory = ({
             headNumber={data.id}
             contents={data.contents}
             transferNumber={data.transferNumber}
-            // published={data.published}
-            days={data.days}
+            published={data.published}
+            result={data.result}
+            AllClick={AllClick}
           />
         ))}
       </Table>
@@ -121,8 +123,9 @@ const CheckTd = styled(HeadTd)`
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin: 50px 0;
-  bottom: 0;
+  margin-top: 30px;
+  position: relative;
+  left: -100px;
 `;
 const PageMove = styled.button`
   font-family: Work Sans;
