@@ -55,7 +55,6 @@ const RewardConHistory = ({
           <HeadTd contents>{contents}</HeadTd>
           <HeadTd transferNumber>{transferNumber}</HeadTd>
           {/* <HeadTd published>{published}</HeadTd> */}
-          <HeadTd result>{result}</HeadTd>
           <HeadTd days>{days}</HeadTd>
         </HeadTr>
         {posts.map(data => (
