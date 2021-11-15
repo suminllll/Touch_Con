@@ -1,9 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const AdminBtn = ({ btnName, color }) => {
+const AdminBtn = ({ btnName, color, handleBtn }) => {
+  // console.log(handleAdd);
   //사용법 <color={color}, color 안적으면 회색. btnName='원하는이름' />
-  return <Button color={color}>{btnName}</Button>;
+  return (
+    <Button onClick={handleBtn} color={color}>
+      {btnName}
+    </Button>
+  );
 };
 
 const Button = styled.button`

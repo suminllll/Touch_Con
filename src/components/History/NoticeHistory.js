@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import NoticeHistoryList from './HistoryList/NoticeHistoryList';
 import DummyData from '../pagination/boardData';
 import Pagination from '../pagination';
+import NewdmData from '../pagination/boardData';
 const History = ({
   style,
   Check,
@@ -44,6 +45,7 @@ const History = ({
       setPage(page + 1);
     }
   };
+  // console.log('posts', NewdmData);
 
   return (
     <Container style={{ ...style }}>

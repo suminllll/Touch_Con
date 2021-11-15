@@ -7,8 +7,8 @@ import { useState } from 'react/cjs/react.development';
 import { BtnOrange1, BtnOrange2 } from '../../components/button/buttons';
 
 const RewardManagement = () => {
+  //리워드콘 관리
   const [allClick, setAllClick] = useState(false);
-
   const handleAllClick = () => {
     setAllClick(!allClick);
   };

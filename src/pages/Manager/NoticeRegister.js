@@ -1,10 +1,48 @@
-import React from 'react';
+import React, { useImperativeHandle, useState } from 'react';
 import styled from 'styled-components';
 import AdminBtn from '../../components/AdminBtn/AdminBtn';
 import Title from '../../components/Title/Title';
 import { Link } from 'react-router-dom';
+import DummyData from '../../components/pagination/boardData';
 
 const NoticeRegister = () => {
+  const [getNotice, setGetNotice] = useState('');
+  const [getNoticeTitle, setGetNoticeTitle] = useState('');
+  const [idNumber, setIdNumber] = useState(22);
+  const [dmData, setdmData] = useState(DummyData);
+  const NewDmData = [...dmData];
+
+  const countIdNumber = () => {
+    setIdNumber(idNumber + 1);
+  };
+
+  // console.log(countIdNumber());
+  // console.log('nnnnnnnnn', DummyData[1].id.length);
+  // console.log('asdfasdf', NewDmData);
+
+  const noticeInputTitle = e => {
+    setGetNoticeTitle(e.target.value);
+  };
+
+  const noticeInput = e => {
+    if (getNoticeTitle.length > 3) {
+      setGetNotice(e.target.value);
+    } else {
+      alert('제목을 입력하세요');
+    }
+  };
+  //id 값이 22부터 차례대로 등록되도록 한다.
+
+  const handleAdd = () => {
+    if (getNotice.length > 4) {
+      NewDmData.unshift({ id: 22, title: getNotice });
+      setdmData(NewDmData);
+      alert('공지사항이 등록되었습니다.');
+    } else {
+      alert('4글자 이상 작성해 주세요.');
+    }
+  };
+  console.log('new=>', NewDmData);
   return (
     <>
       <Title
@@ -14,14 +52,18 @@ const NoticeRegister = () => {
       <Article>
         <TitleWrap>
           <TitleBox>제목</TitleBox>
-          <TitleInputBox />
+          <TitleInputBox
+            value={getNoticeTitle}
+            onChange={noticeInputTitle}
+            placeholder="제목을 입력하세요"
+          />
         </TitleWrap>
         <TitleWrap>
           <TitleBox>등록일</TitleBox>
           2021-10-30
         </TitleWrap>
         <TitleWrap>
-          <RegisterInput />
+          <RegisterInput value={getNotice} onChange={noticeInput} />
         </TitleWrap>
 
         <ButtonWrap>
@@ -30,11 +72,11 @@ const NoticeRegister = () => {
               <AdminBtn btnName="취소" />
             </ButtonBox>
           </LinkStyle>
-          <LinkStyle to="/Notice">
-            <ButtonBox>
-              <AdminBtn color="#fd7f36" btnName="등록" />
-            </ButtonBox>
-          </LinkStyle>
+          {/* <LinkStyle to="/Notice"> */}
+          <ButtonBox>
+            <AdminBtn handleBtn={handleAdd} color="#fd7f36" btnName="등록" />
+          </ButtonBox>
+          {/* </LinkStyle> */}
         </ButtonWrap>
       </Article>
     </>
