@@ -62,11 +62,10 @@ export const BtnOrange1 = props => {
         buttonShadow: 'none',
         borderRadius: 5,
         boxShadow: 0,
-        borderColor: '#FD7F36',
+        border: '1px solid #FD7F36',
         color: '#FD7F36',
         fontSize: 18,
         cursor: 'pointer',
-        fontWeight: 800,
         ...style,
       }}
     >
@@ -85,11 +84,10 @@ export const BtnOrange2 = props => {
         minHeight: 30,
         backgroundColor: '#FFFFFF',
         borderRadius: 5,
-        borderColor: '#FD7F36',
+        border: '1px solid #FD7F36',
         color: '#FD7F36',
         fontSize: 18,
         cursor: 'pointer',
-        fontWeight: 800,
         ...style,
       }}
     >

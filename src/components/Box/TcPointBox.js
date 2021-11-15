@@ -14,67 +14,48 @@ const TcPointBox = () => {
         marginTop: 33,
       }}
     >
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          margin: 'auto',
-        }}
-      />
-
-      <div
-        style={
-          {
-            // marginRight: 160,
-            // minwidth: 332,
-          }
-        }
-      >
-        <RightDiv style={{ marginRight: 105 }}>
-          <div style={{ fontSize: 14, fontWeight: 600 }}>
-            총발행된 터치 포인트 수량
-          </div>
-          <div
-            style={{
-              marginLeft: 18,
-              marginRight: 18,
-              fontSize: 14,
-              color: '#FD7F36',
-            }}
-          >
-            8000
-          </div>
-          <div style={{ fontSize: 14, fontWeight: 600 }}>(touch/point)</div>
-        </RightDiv>
-
+      <RightDiv>
+        <div style={{ fontSize: 14, fontWeight: 600 }}>
+          총발행된 터치 포인트 수량
+        </div>
         <div
           style={{
-            width: 2,
-            height: 20,
-            left: 869,
-            top: 331,
-            background: '#EE7E24',
+            marginLeft: 18,
+            marginRight: 18,
+            fontSize: 14,
+            color: '#FD7F36',
           }}
-        />
+        >
+          8000
+        </div>
+        <div style={{ fontSize: 14, fontWeight: 600 }}>(touch/point)</div>
+      </RightDiv>
 
-        <RightDiv style={{ marginLeft: 105 }}>
-          <div style={{ fontSize: 14, fontWeight: 600 }}>
-            사용한 터치 포인트 수량
-          </div>
-          <div
-            style={{
-              marginLeft: 30,
-              marginRight: 18,
-              fontSize: 14,
-              color: '#FD7F36',
-            }}
-          >
-            8000
-          </div>
-          <div style={{ fontSize: 14, fontWeight: 600 }}>(touch/point)</div>
-        </RightDiv>
-      </div>
+      <view
+        style={{
+          width: 2,
+          height: 20,
+          left: 869,
+          top: 331,
+          background: '#EE7E24',
+        }}
+      />
+      <RightDiv>
+        <div style={{ fontSize: 14, fontWeight: 600 }}>
+          사용한 터치 포인트 수량
+        </div>
+        <div
+          style={{
+            marginLeft: 30,
+            marginRight: 18,
+            fontSize: 14,
+            color: '#FD7F36',
+          }}
+        >
+          8000
+        </div>
+        <div style={{ fontSize: 14, fontWeight: 600 }}>(touch/point)</div>
+      </RightDiv>
     </div>
   );
 };
