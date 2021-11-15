@@ -26,7 +26,10 @@ const PointAllocation = () => {
           </TitleWrap>
           <TitleWrap>
             <TitleBox>포인트 갯수</TitleBox>
-            <InputPlaceholder placeholder="숫자만 입력 해주세요." />
+            <InputPlaceholder
+              type="number"
+              placeholder="숫자만 입력 해주세요."
+            />
           </TitleWrap>
           <AdminBtn btnName="포인트 배정" color="#fd7f36" />
         </TopWrap>

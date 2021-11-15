@@ -326,6 +326,8 @@ const DummyData = [
 
 export default DummyData;
 
+export const NewdmData = [...DummyData];
+
 export const Images = [
   {
     id: 1,

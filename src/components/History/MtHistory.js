@@ -93,8 +93,6 @@ const PageContainer = styled.div`
 `;
 
 const PageMove = styled.button`
-  font-family: Work Sans;
-  font-style: normal;
   font-weight: 600;
   font-size: 13px;
   line-height: 15px;
@@ -106,11 +104,11 @@ const PageMove = styled.button`
 `;
 
 const Container = styled.div`
-  width: 1032px;
+  min-width: 1032px;
 `;
 
 const Table = styled.table`
-  width: 1190px;
+  min-width: 1190px;
   text-align: center;
   border: 1px solid #dddddd;
 `;

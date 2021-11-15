@@ -127,6 +127,7 @@ const PageContainer = styled.div`
   position: relative;
   left: -100px;
 `;
+
 const PageMove = styled.button`
   font-family: Work Sans;
   font-style: normal;

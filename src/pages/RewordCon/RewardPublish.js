@@ -39,11 +39,17 @@ const RewardPublish = () => {
           </Ul>
           <Ul>
             <TitleBox>배분할 터치포인트 수량</TitleBox>
-            <InputPlaceholder placeholder="숫자만 입력 해주세요." />
+            <InputPlaceholder
+              type="number"
+              placeholder="숫자만 입력 해주세요."
+            />
           </Ul>
           <Ul>
             <TitleBox>리워드콘 생성 갯수</TitleBox>
-            <InputPlaceholder placeholder="숫자만 입력 해주세요." />
+            <InputPlaceholder
+              type="number"
+              placeholder="숫자만 입력 해주세요."
+            />
           </Ul>
           <Ul>
             <MiddleWrap>

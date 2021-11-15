@@ -15,7 +15,6 @@ const TextBox = () => {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        width: 1200,
         marginLeft: 175,
       }}
     >

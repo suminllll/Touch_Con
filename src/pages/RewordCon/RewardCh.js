@@ -9,12 +9,16 @@ import RewardConHistory from '../../components/History/RewardConHistory';
 const RewardCh = () => {
   //생성내역
   return (
-    <>
+    <div
+      style={{
+        flex: 1,
+      }}
+    >
       <Title titleText="생성내역" categoryText="리워드콘 > 생성내역" />
       <div
         style={{
           flex: 1,
-          marginLeft: 180,
+          marginLeft: 250,
         }}
       >
         <div
@@ -40,7 +44,7 @@ const RewardCh = () => {
         </Box>
         {/* <History style={{ marginLeft: 180, marginTop: 93 }} /> */}
       </div>
-    </>
+    </div>
   );
 };
 

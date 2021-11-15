@@ -9,9 +9,9 @@ const Notice = () => {
   const [text, setText] = useState('');
 
   const textHandle = e => {
-    console.log(e);
     setText(e.target.value);
   };
+
   return (
     <>
       <Title titleText="공지사항" categoryText="관리자 페이지 > 공지사항" />
