@@ -47,10 +47,6 @@ const AppDocDetail = () => {
       </div>
       <div
         style={{
-          // display: 'flex',
-          // flexDirection: 'row',
-          // justifyContent: 'column',
-          // marginRight: 130,
           marginLeft: 200,
           marginTop: 40,
         }}
@@ -73,7 +69,7 @@ const AppDocDetail = () => {
         <AddHistory
           AllClick={allClick}
           Check="Check"
-          style={{ marginLeft: 170, marginTop: 12 }}
+          style={{ marginLeft: 170 }}
         />
       </div>
     </>

@@ -14,12 +14,13 @@ const AddHistoryList = ({
   produced,
   use,
   result,
+  AllClick,
 }) => {
   return (
     <tbody>
       <BodyTr>
         <CheckTd Check={Check}>
-          <CheckBox />
+          <CheckBox AllClick={AllClick} />
         </CheckTd>
         <BodyTd headNumber>{headNumber}</BodyTd>
         <BodyTd companyName>{companyName}</BodyTd>

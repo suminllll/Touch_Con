@@ -31,7 +31,11 @@ const RewardManagement = () => {
             width: 1250,
           }}
         >
-          <BtnOrange1 text="전체선택" style={{ marginTop: 12 }} />
+          <BtnOrange1
+            handleAllClick={handleAllClick}
+            text="전체선택"
+            style={{ marginBottom: 10 }}
+          />
           <div>
             <BtnOrange2 text="수정" />
             <BtnOrange2 text="삭제" />
@@ -57,29 +61,6 @@ const Section = styled.div`
 
 const Box = styled.div`
   margin-left: 23vw;
-`;
-
-const Button = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-`;
-
-const AllSelect = styled.div`
-  margin-left: -3px;
-`;
-
-const HeadImg = styled.img`
-  position: absolute;
-`;
-
-const Select = styled.div`
-  margin-right: 37px;
-`;
-
-const Img = styled.img`
-  margin: 3px;
-  cursor: pointer;
 `;
 
 export default RewardManagement;
