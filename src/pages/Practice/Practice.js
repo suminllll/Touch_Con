@@ -2,62 +2,49 @@ import React, { useEffect } from 'react';
 import { useState } from 'react/cjs/react.development';
 import styled from 'styled-components';
 import PracticeInput from './PracticeInput';
+import practiceData from './PracticeData';
 
 const Practice = () => {
-  const [recomand, setRecomand] = useState([
-    '남자코트 추천',
-    '강남 우동맛집',
-    '파이썬독학',
-  ]);
-  const NewRecomand = [...recomand];
+  const [shoesData, setshoesData] = useState(practiceData);
+  console.log('데이터길이', shoesData.length);
+  const newShoesData = [...shoesData];
 
-  const handleAdd = () => {
-    NewRecomand.unshift(valueData);
-    // setRecomand(NewRecomand);   <--- 이 부분. 다시 업데이트를 해주는데에 실패했기 때문에
-    // 콘솔은 찍히는데 내가 원하는대로 실행이 안됐거임. 블로그에 써라
-    setValueDate('');
+  // const newShoesData = () =>{
+  //   for (let i = 0; i < shoesData.length; i++) {
+  //     shoesData[i].push
+  // }
+
+  // {newShoesData.map((data)=>{
+  //   return <Card shoes = {data.title}  />{data.content}</Card>
+  // })}
+  // // 데이터를 삽입할때 객체로 삽입해야한다.
+
+  const [addValueData, setAddValueData] = useState({});
+
+  const handleAddInput = e => {
+    setAddValueData(e.target.value);
   };
 
-  const [valueData, setValueDate] = useState('');
-
-  const handleRecommand = e => {
-    setValueDate(e.target.value);
+  const handleAddList = () => {
+    newShoesData.unshift(addValueData);
+    setshoesData(newShoesData);
+    setAddValueData('');
   };
-
+  console.log('NewData', newShoesData);
+  console.log('addValue', addValueData);
   return (
     <div>
-      {NewRecomand.map((data, i) => {
-        return <Reco key={i}>{data}</Reco>;
+      {newShoesData.map((data, i) => {
+        return <Reco key={i}>{data.content}</Reco>;
       })}
       <PracticeInput
-        NewRecomand={NewRecomand}
-        valueData={valueData}
-        handleRecommand={handleRecommand}
-        handleAdd={handleAdd}
+        addValueData={addValueData}
+        handleAddList={handleAddList}
+        handleAddInput={handleAddInput}
       />
     </div>
   );
 };
-
-const Publish = styled.div`
-  margin-left: 200px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-
-  input {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    width: 80%;
-    border: 1px solid grey;
-  }
-
-  button {
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-  }
-`;
 
 const Reco = styled.div`
   border-bottom: 1px solid black;

@@ -1,25 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PracticeInput = ({
-  NewRecomand,
-  valueData,
-  handleRecommand,
-  handleAdd,
-}) => {
+const PracticeInput = ({ handleAddList, handleAddInput, addValueData }) => {
   return (
     <Publish>
       <input
-        value={valueData}
-        onChange={handleRecommand}
+        value={addValueData}
+        onChange={handleAddInput}
         onKeyPress={e => {
           if (e.key === 'Enter') {
-            handleAdd();
-            console.log(NewRecomand);
+            handleAddList();
           }
         }}
       />
-      <button onClick={handleAdd}>저장</button>
+      <button onClick={handleAddList}>저장</button>
     </Publish>
   );
 };

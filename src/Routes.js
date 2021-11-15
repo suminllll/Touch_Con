@@ -22,8 +22,8 @@ import Practice from './pages/Practice/Practice';
 const Routes = () => {
   return (
     <Router>
-      {/* <Nav />
-      <Menu /> */}
+      <Nav />
+      <Menu />
       <Switch>
         <Route exact path="/practice" component={Practice} />
         <Route exact path="/login" component={Login} />
