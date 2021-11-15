@@ -62,11 +62,7 @@ const RcHistory = ({ style }) => {
       </Table>
       <PageContainer>
         <PageMove
-<<<<<<< HEAD
-          style={{ marginRight: 63 }}
-=======
           style={{ marginLeft: 63, marginRight: 70 }}
->>>>>>> 1751dd6 (뷰 수정중)
           onClick={e => {
             onClickPageHandler(e, 'back');
           }}
