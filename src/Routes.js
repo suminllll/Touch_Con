@@ -17,7 +17,6 @@ import PointAllocation from './pages/Manager/PointAllocation';
 import TpManagement from './pages/TouchPoint/TpManagement';
 import IhRewardCon from './pages/IssueHistory/IhRewardCon';
 import IhTouchPoint from './pages/IssueHistory/IhTouchPoint';
-import Practice from './pages/Practice/Practice';
 
 const Routes = () => {
   return (
@@ -25,7 +24,6 @@ const Routes = () => {
       <Nav />
       <Menu />
       <Switch>
-        <Route exact path="/practice" component={Practice} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/SignUp" component={SignUp} />
         {/* 리워드 콘 폴더 */}

@@ -21,9 +21,8 @@ const RewardConList = ({
         <BodyTd>{headNumber}</BodyTd>
         <BodyTd>{contents}</BodyTd>
         <BodyTd>{transferNumber}</BodyTd>
-        <BodyTd>{days}</BodyTd>
-        <BodyTd published>{published}</BodyTd>
         <BodyTd result>{result}</BodyTd>
+        <BodyTd>{days}</BodyTd>
       </BodyTr>
     </tbody>
   );

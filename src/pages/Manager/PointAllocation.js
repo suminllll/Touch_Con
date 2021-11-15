@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import AdminBtn from '../../components/AdminBtn/AdminBtn';
-import History from '../../components/History/History';
+import { BtnOrange1, BtnOrange2 } from '../../components/button/buttons';
+import PaHistory from '../../components/History/PaHistory';
 import Title from '../../components/Title/Title';
 
 const PointAllocation = () => {
@@ -11,7 +12,13 @@ const PointAllocation = () => {
         titleText="포인트 배정"
         categoryText="관리자 페이지 > 포인트 배정"
       />
-      <>
+      <div
+        style={{
+          flex: 1,
+          marginLeft: 380,
+          maxWidth: 1100,
+        }}
+      >
         <TopWrap>
           <TitleWrap>
             <TitleBox>기업명</TitleBox>
@@ -19,12 +26,31 @@ const PointAllocation = () => {
           </TitleWrap>
           <TitleWrap>
             <TitleBox>포인트 갯수</TitleBox>
-            <InputPlaceholder placeholder="숫자만 입력 해주세요." />
+            <InputPlaceholder
+              type="number"
+              placeholder="숫자만 입력 해주세요."
+            />
           </TitleWrap>
           <AdminBtn btnName="포인트 배정" color="#fd7f36" />
         </TopWrap>
-        <History style={{ marginLeft: 360 }} />
-      </>
+
+        <div
+          style={{
+            justifyContent: 'space-between',
+            width: 1180,
+            display: 'flex',
+          }}
+        >
+          <div>
+            <BtnOrange1 text="전체선택" />
+          </div>
+          <div>
+            <BtnOrange1 text="배정취소" />
+            <BtnOrange2 text="삭제" />
+          </div>
+        </div>
+        <PaHistory Check="Check" />
+      </div>
     </>
   );
 };
@@ -35,7 +61,7 @@ const TopWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 40px 110px 50px 400px;
+  margin: 40px auto 50px auto;
 `;
 
 const TitleWrap = styled.div`

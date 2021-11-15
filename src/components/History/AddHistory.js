@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import HistoryList from './HistoryList/HistoryList';
-import BOARD_DATA from './HistoryList/boardData';
 import DummyData from '../pagination/boardData';
 import Pagination from '../pagination';
+import AddHistoryList from './HistoryList/AddHistoryList';
 
 const AddHistory = ({ Check, style, AllClick }) => {
   const maxPostCount = 7;
@@ -65,12 +64,13 @@ const AddHistory = ({ Check, style, AllClick }) => {
           <HeadTd>전송일</HeadTd>
         </HeadTr>
         {posts.map(data => (
-          <HistoryList
+          <AddHistoryList
             key={data.id}
             headNumber={data.id}
+            companyName={data.companyName}
             contents={data.contents}
-            number={data.number}
-            day={data.day}
+            result={data.result}
+            days={data.days}
             Check={Check}
             AllClick={AllClick}
           />

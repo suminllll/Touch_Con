@@ -58,15 +58,11 @@ const RewardKeep = () => {
               maxWidth: 1240,
               gridTemplateColumns: '0fr 0fr 0fr 0fr 0fr',
               gridTemplateRows: '2fr',
-              marginLeft: 400,
+              marginLeft: 300,
               gap: 20,
               marginBottom: 30,
             }}
           >
-            {console.log(posts)}
-            {/* {posts.map(data => (
-              <img src={require(data.img).default} />
-            ))} */}
             {posts.map(data => (
               <img
                 key={data.id}

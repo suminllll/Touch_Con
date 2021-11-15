@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import HistoryList from './HistoryList/HistoryList';
-import BOARD_DATA from './HistoryList/boardData';
 import Pagination from '../pagination';
 import DummyData from '../pagination/boardData';
+import RcHistoryList from './HistoryList/RcHistoryList';
 
 const RcHistory = ({ style }) => {
   const maxPostCount = 9;
@@ -44,34 +43,20 @@ const RcHistory = ({ style }) => {
     <Container style={{ ...style }}>
       <Table>
         <HeadTr>
-          <HeadTd
-            style={{
-              display: 'flex',
-              flexdirection: 'row',
-              alignItems: 'center',
-            }}
-          >
-            <div
-              style={{
-                width: 10,
-                height: 45,
-                background: '#FD7F36',
-              }}
-            />
-            No.
-          </HeadTd>
+          <HeadTd> No.</HeadTd>
           <HeadTd>내용</HeadTd>
           <HeadTd>생성</HeadTd>
           <HeadTd>전송</HeadTd>
           <HeadTd>날짜</HeadTd>
         </HeadTr>
         {posts.map(data => (
-          <HistoryList
+          <RcHistoryList
             key={data.id}
             headNumber={data.id}
             contents={data.contents}
-            number={data.number}
-            day={data.day}
+            create={data.create}
+            send={data.send}
+            days={data.days}
           />
         ))}
       </Table>

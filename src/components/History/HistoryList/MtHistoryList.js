@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CheckBox from '../../CheckBox/CheckBox';
 
-const HistoryList = ({
+const MtHistoryList = ({
   Check,
   headNumber,
   contents,
@@ -14,17 +14,17 @@ const HistoryList = ({
   produced,
   use,
   result,
-  AllClick,
 }) => {
   return (
     <tbody>
       <BodyTr>
         <CheckTd Check={Check}>
-          <CheckBox AllClick={AllClick} />
+          <CheckBox />
         </CheckTd>
         <BodyTd headNumber>{headNumber}</BodyTd>
         <BodyTd contents>{contents}</BodyTd>
-        <BodyTd transferNumber>{transferNumber}</BodyTd>
+        <BodyTd published>{published}</BodyTd>
+        <BodyTd use>{use}</BodyTd>
         <BodyTd days>{days}</BodyTd>
         {/* <BodyTd transferNumber>{transferNumber}</BodyTd> */}
         {/* <BodyTd companyName>{companyName}</BodyTd> */}
@@ -53,4 +53,4 @@ const CheckTd = styled(BodyTd)`
   display: ${props => (props.Check ? '"";' : 'none;')};
 `;
 
-export default HistoryList;
+export default MtHistoryList;

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import HistoryList from './HistoryList/HistoryList';
+import NoticeHistoryList from './HistoryList/NoticeHistoryList';
 import DummyData from '../pagination/boardData';
 import Pagination from '../pagination';
+import NewdmData from '../pagination/boardData';
 const History = ({
   style,
   Check,
@@ -44,22 +45,23 @@ const History = ({
       setPage(page + 1);
     }
   };
+  // console.log('posts', NewdmData);
 
   return (
     <Container style={{ ...style }}>
       <Table>
         <HeadTr>
           <HeadTd>No.</HeadTd>
-          <HeadTd>내용</HeadTd>
-          <HeadTd>생성갯수</HeadTd>
-          <HeadTd>생성일</HeadTd>
+          <HeadTd>제목</HeadTd>
+          <HeadTd>게시자</HeadTd>
+          <HeadTd>등록일</HeadTd>
         </HeadTr>
         {posts.map(data => (
-          <HistoryList
+          <NoticeHistoryList
             key={data.id}
             headNumber={data.id}
-            contents={data.contents}
-            transferNumber={data.transferNumber}
+            title={data.title}
+            writer={data.writer}
             days={data.days}
             // companyName={data.companyName}
             // points={data.points}
@@ -120,8 +122,7 @@ const CheckTd = styled(HeadTd)`
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin: 50px 0;
-  bottom: 0;
+  margin-top: 30px;
 `;
 const PageMove = styled.button`
   font-family: Work Sans;

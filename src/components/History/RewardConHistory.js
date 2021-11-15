@@ -11,6 +11,7 @@ const RewardConHistory = ({
   transferNumber,
   days,
   AllClick,
+  result,
 }) => {
   const maxPostCount = 9;
   const [posts, setPosts] = useState(DummyData);
@@ -53,7 +54,7 @@ const RewardConHistory = ({
           <HeadTd contents>{contents}</HeadTd>
           <HeadTd transferNumber>{transferNumber}</HeadTd>
           {/* <HeadTd published>{published}</HeadTd> */}
-          {/* <HeadTd result>{result}</HeadTd> */}
+          <HeadTd result>{result}</HeadTd>
           <HeadTd days>{days}</HeadTd>
         </HeadTr>
         {posts.map(data => (
@@ -65,9 +66,7 @@ const RewardConHistory = ({
             contents={data.contents}
             transferNumber={data.transferNumber}
             // published={data.published}
-            // result={data.result}
             days={data.days}
-            AllClick={AllClick}
           />
         ))}
       </Table>
