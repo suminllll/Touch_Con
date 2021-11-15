@@ -45,9 +45,6 @@ const RewardTh = () => {
     </div>
   );
 };
-const HeadImg = styled.img`
-  position: absolute;
-`;
 
 const Box = styled.div`
   margin-top: 100px;

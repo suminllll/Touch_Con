@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import AdminBtn from '../../components/AdminBtn/AdminBtn';
 import { BtnOrange1, BtnOrange2 } from '../../components/button/buttons';
@@ -6,6 +6,12 @@ import PaHistory from '../../components/History/PaHistory';
 import Title from '../../components/Title/Title';
 
 const PointAllocation = () => {
+  const [allClick, setAllClick] = useState(false);
+
+  const handleAllClick = () => {
+    setAllClick(!allClick);
+  };
+
   return (
     <>
       <Title
@@ -26,7 +32,10 @@ const PointAllocation = () => {
           </TitleWrap>
           <TitleWrap>
             <TitleBox>포인트 갯수</TitleBox>
-            <InputPlaceholder placeholder="숫자만 입력 해주세요." />
+            <InputPlaceholder
+              type="number"
+              placeholder="숫자만 입력 해주세요."
+            />
           </TitleWrap>
           <AdminBtn btnName="포인트 배정" color="#fd7f36" />
         </TopWrap>
@@ -39,14 +48,14 @@ const PointAllocation = () => {
           }}
         >
           <div>
-            <BtnOrange1 text="전체선택" />
+            <BtnOrange1 handleAllClick={handleAllClick} text="전체선택" />
           </div>
           <div>
             <BtnOrange1 text="배정취소" />
             <BtnOrange2 text="삭제" />
           </div>
         </div>
-        <PaHistory Check="Check" />
+        <PaHistory Check="Check" AllClick={allClick} />
       </div>
     </>
   );

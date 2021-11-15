@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
 export const Btn1 = props => {
   const { text, style } = props;
 
@@ -49,15 +48,16 @@ export const Btn2 = props => {
   );
 };
 
-export const BtnOrange1 = props => {
-  const { text, style } = props;
+export const BtnOrange1 = ({ text, style, handleAllClick }) => {
   console.log(text);
 
   return (
     <Button
+      onClick={handleAllClick}
       style={{
         minWidth: 77,
         minHeight: 30,
+        marginBottom: 10,
         backgroundColor: '#FFFFFF',
         buttonShadow: 'none',
         borderRadius: 5,
@@ -74,14 +74,14 @@ export const BtnOrange1 = props => {
   );
 };
 
-export const BtnOrange2 = props => {
-  const { text, style } = props;
-
+export const BtnOrange2 = ({ text, style, handleAllClick }) => {
   return (
     <Button
+      onClick={handleAllClick}
       style={{
         minWidth: 50,
         minHeight: 30,
+        marginBottom: 10,
         backgroundColor: '#FFFFFF',
         borderRadius: 5,
         border: '1px solid #FD7F36',

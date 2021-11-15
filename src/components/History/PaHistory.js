@@ -5,7 +5,7 @@ import BOARD_DATA from './HistoryList/boardData';
 import DummyData from '../pagination/boardData';
 import Pagination from '../pagination';
 
-const PaHistory = ({ Check, style }) => {
+const PaHistory = ({ Check, style, AllClick }) => {
   const maxPostCount = 7;
   const [posts, setPosts] = useState(DummyData);
   const [page, setPage] = useState(1); // 현재 페이지
@@ -56,6 +56,7 @@ const PaHistory = ({ Check, style }) => {
             points={data.points}
             days={data.days}
             Check={Check}
+            AllClick={AllClick}
           />
         ))}
       </Table>
