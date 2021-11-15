@@ -46,5 +46,4 @@ const TitleText = styled.div`
 const CategoryText = styled.div`
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 2px;
 `;

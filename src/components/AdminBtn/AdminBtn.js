@@ -12,9 +12,7 @@ const Button = styled.button`
   border: none;
   cursor: pointer;
   font-weight: 600;
-  background-color: ${({ color }) => {
-    return color ? '#fd7f36' : 'grey';
-  }};
+  background-color: ${props => (props.color ? '#fd7f36' : 'grey')};
   color: white;
 `;
 

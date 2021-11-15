@@ -11,12 +11,12 @@ const SingUp = () => {
   return (
     <>
       <Menu />
-      <Title titleText="기업회원가입" categoryText="리워드콘 > 생성내역" />
+      <Title titleText="기업회원가입" />
       <Section>
         <SignupInput name="기업명" />
-        <SignupInput name="연락처" />
+        <SignupInput name="연락처" placeHolder="01023456789" />
         <SignupInput name="대표자명" />
-        <SignupInput name="사업자등록번호" />
+        <SignupInput name="사업자등록번호" placeHolder="32420498025" />
         <SignupCheck>
           <CheckBox />
           <Span>[필수] 개인정보 수집 및 이용 동의</Span>
@@ -36,6 +36,7 @@ const SingUp = () => {
 
 const LinkStyle = styled(Link)`
   text-decoration: none;
+  margin: 40px;
 `;
 
 const Section = styled.div`
@@ -49,22 +50,19 @@ const SignupCheck = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
-  /* position: relative;
-  top: 400px; */
+  margin-top: 350px;
 `;
 
 const Span = styled.div`
-  /* position: relative;
-  left: 480px;
-  bottom: 3px; */
+  margin-left: 10px;
 `;
 
 const Button = styled.div`
   position: relative;
-  margin-top: 150px;
+  margin-top: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin-left: px;
 `;
 
 export default SingUp;

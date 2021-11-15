@@ -4,7 +4,7 @@ import DummyData from '../pagination/boardData';
 import Pagination from '../pagination';
 import AddHistoryList from './HistoryList/AddHistoryList';
 
-const AddHistory = ({ Check, style }) => {
+const AddHistory = ({ Check, style, AllClick }) => {
   const maxPostCount = 7;
   const [posts, setPosts] = useState(DummyData);
   const [page, setPage] = useState(1); // 현재 페이지
@@ -41,6 +41,21 @@ const AddHistory = ({ Check, style }) => {
     <Container style={{ ...style }}>
       <Table>
         <HeadTr>
+          <HeadTd
+            style={{
+              display: 'flex',
+              flexdirection: 'row',
+              alignItems: 'center',
+            }}
+          >
+            <div
+              style={{
+                width: 10,
+                height: 45,
+                background: '#FD7F36',
+              }}
+            />
+          </HeadTd>
           <CheckTd Check={Check} />
           <HeadTd>No.</HeadTd>
           <HeadTd>기업명</HeadTd>
@@ -57,6 +72,7 @@ const AddHistory = ({ Check, style }) => {
             result={data.result}
             days={data.days}
             Check={Check}
+            AllClick={AllClick}
           />
         ))}
       </Table>
@@ -89,7 +105,8 @@ const AddHistory = ({ Check, style }) => {
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin: 50px 0;
+  bottom: 0;
 `;
 const PageMove = styled.button`
   font-family: Work Sans;
@@ -109,9 +126,8 @@ const Container = styled.div`
 `;
 
 const Table = styled.table`
+  min-width: 74vw;
   text-align: center;
-  border: 1px solid #dddddd;
-  width: 1180px;
 `;
 
 const HeadTr = styled.tr`

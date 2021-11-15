@@ -13,7 +13,7 @@ const TextBox = () => {
         marginTop: 17,
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
         width: 1200,
         marginLeft: 175,
@@ -26,8 +26,9 @@ const TextBox = () => {
         style={{
           backgroundColor: '#F0F0F0',
           minHeight: 30,
+          marginLeft: 50,
           padding: 8,
-          borderRadius: 5,
+          borderRadius: 3,
         }}
       >
         <div
@@ -40,7 +41,14 @@ const TextBox = () => {
           {point}
         </div>
       </div>
-      <div style={{ marginRight: 315, fontSize: 16, fontWeight: 600 }}>
+      <div
+        style={{
+          marginLeft: 50,
+          marginRight: 315,
+          fontSize: 16,
+          fontWeight: 600,
+        }}
+      >
         (touch/point)
       </div>
     </div>

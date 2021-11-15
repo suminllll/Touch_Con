@@ -11,5 +11,6 @@ export const Page = styled.p`
   padding: 0 16px 5px;
   cursor: pointer;
   margin: 0 3px;
+
   border-bottom: ${props => (props.active ? ' 3px solid #FD7F36' : null)};
 `;

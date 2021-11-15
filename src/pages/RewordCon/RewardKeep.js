@@ -55,11 +55,10 @@ const RewardKeep = () => {
           <div
             style={{
               display: 'grid',
-              width: '90%',
               maxWidth: 1240,
-              gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
+              gridTemplateColumns: '0fr 0fr 0fr 0fr 0fr',
               gridTemplateRows: '2fr',
-              marginLeft: 200,
+              marginLeft: 300,
               gap: 20,
               marginBottom: 30,
             }}
@@ -71,7 +70,7 @@ const RewardKeep = () => {
                 src={data.img}
                 style={{
                   width: 165,
-                  height: 350,
+                  height: 256,
                 }}
               />
             ))}
@@ -79,7 +78,7 @@ const RewardKeep = () => {
         </div>
         <PageContainer>
           <PageMove
-            style={{ marginLeft: 63 }}
+            style={{ marginLeft: 63, marginRight: 70 }}
             onClick={e => {
               onClickPageHandler(e, 'back');
             }}
@@ -89,7 +88,7 @@ const RewardKeep = () => {
           </PageMove>
           <Pagination page={page} totalPage={totalPage} setPage={setPage} />
           <PageMove
-            style={{ marginRight: 55 }}
+            style={{ marginRight: 55, marginLeft: 60 }}
             onClick={e => {
               onClickPageHandler(e, 'next');
             }}
@@ -108,7 +107,8 @@ export default RewardKeep;
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin: 50px 0;
+  bottom: 0;
 `;
 
 const PageMove = styled.button`
