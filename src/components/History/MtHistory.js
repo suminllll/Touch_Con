@@ -88,8 +88,8 @@ const MtHistory = ({ style }) => {
 const PageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin: 50px 0;
-  bottom: 0;
+  margin-top: 100px;
+  margin-left: 50px;
 `;
 
 const PageMove = styled.button`
