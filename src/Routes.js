@@ -17,6 +17,7 @@ import PointAllocation from './pages/Manager/PointAllocation';
 import TpManagement from './pages/TouchPoint/TpManagement';
 import IhRewardCon from './pages/IssueHistory/IhRewardCon';
 import IhTouchPoint from './pages/IssueHistory/IhTouchPoint';
+import { useHistory, useParams } from 'react-router';
 
 const Routes = () => {
   return (
