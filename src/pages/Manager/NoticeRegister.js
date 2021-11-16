@@ -1,9 +1,10 @@
-import React, { useImperativeHandle, useState } from 'react';
+import React, { useImperativeHandle, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import AdminBtn from '../../components/AdminBtn/AdminBtn';
 import Title from '../../components/Title/Title';
 import { Link } from 'react-router-dom';
 import DummyData from '../../components/pagination/boardData';
+import axios from 'axios';
 
 const NoticeRegister = () => {
   const [getNotice, setGetNotice] = useState('');
@@ -11,14 +12,26 @@ const NoticeRegister = () => {
   const [idNumber, setIdNumber] = useState(22);
   const [dmData, setdmData] = useState(DummyData);
   const NewDmData = [...dmData];
+  const [dummy, setDummy] = useState([]);
+
+  useEffect(() => {
+    axiosTest();
+    axiosTest2();
+  }, [getNotice]);
+
+  const axiosTest = () => {
+    axios
+      .post('https://jsonplaceholder.typicode.com/users', {
+        id: 1,
+        name: 'hoyoung',
+      })
+      .then(res => setDummy(res.data.result))
+      .catch(err => console.log(err));
+  };
 
   const countIdNumber = () => {
     setIdNumber(idNumber + 1);
   };
-
-  // console.log(countIdNumber());
-  // console.log('nnnnnnnnn', DummyData[1].id.length);
-  // console.log('asdfasdf', NewDmData);
 
   const noticeInputTitle = e => {
     setGetNoticeTitle(e.target.value);
@@ -42,7 +55,8 @@ const NoticeRegister = () => {
       alert('4글자 이상 작성해 주세요.');
     }
   };
-  console.log('new=>', NewDmData);
+  // console.log('new=>', NewDmData);
+
   return (
     <>
       <Title
