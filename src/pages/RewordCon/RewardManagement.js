@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import RewardConHistory from '../../components/History/RewardConHistory';
 import Title from '../../components/Title/Title';
@@ -9,12 +9,12 @@ import { BtnOrange1, BtnOrange2 } from '../../components/button/buttons';
 const RewardManagement = () => {
   //리워드콘 관리
   const [allClick, setAllClick] = useState(false);
+
   const handleAllClick = () => {
     setAllClick(!allClick);
   };
 
   //리워드콘 관리
-
   return (
     <Section>
       <Title
@@ -45,6 +45,7 @@ const RewardManagement = () => {
         <RewardConHistory
           Check={CheckBox}
           AllClick={allClick}
+          SetAllClick={setAllClick}
           headNumber="No."
           contents="내용"
           transferNumber="전송갯수"

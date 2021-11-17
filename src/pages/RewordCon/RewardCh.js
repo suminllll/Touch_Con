@@ -34,7 +34,6 @@ const RewardCh = () => {
           <Btn1 text="검색" style={{ marginLeft: 250, marginTop: 30 }} />
         </div>
         <Box>
-          <HeadImg src="images/Rectangle 11.png" />
           <RewardConHistory
             headNumber="No."
             contents="내용"

@@ -41,21 +41,6 @@ const AddHistory = ({ Check, style, AllClick }) => {
     <Container style={{ ...style }}>
       <Table>
         <HeadTr>
-          <HeadTd
-            style={{
-              display: 'flex',
-              flexdirection: 'row',
-              alignItems: 'center',
-            }}
-          >
-            <div
-              style={{
-                width: 10,
-                height: 45,
-                background: '#FD7F36',
-              }}
-            />
-          </HeadTd>
           <CheckTd Check={Check} />
           <HeadTd>No.</HeadTd>
           <HeadTd>기업명</HeadTd>
