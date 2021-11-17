@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Btn1 = props => {
   const { text, style } = props;
 
-  console.log('Btn1', text);
   return (
     <div>
       <Button
@@ -27,9 +26,6 @@ export const Btn1 = props => {
 
 export const Btn2 = props => {
   const { text, style } = props;
-
-  console.log('Btn2', text);
-
   return (
     <Button
       style={{
@@ -49,8 +45,6 @@ export const Btn2 = props => {
 };
 
 export const BtnOrange1 = ({ text, style, handleAllClick }) => {
-  console.log(text);
-
   return (
     <Button
       onClick={handleAllClick}

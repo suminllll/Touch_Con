@@ -11,8 +11,7 @@ const RewardConHistory = ({
   transferNumber,
   days,
   AllClick,
-  style,
-  result,
+  SetAllClick,
 }) => {
   const maxPostCount = 9;
   const [posts, setPosts] = useState(DummyData);
@@ -25,10 +24,16 @@ const RewardConHistory = ({
     DivisionPage();
   }, [page]);
 
+  useEffect(() => {
+    if (AllClick) {
+      SetAllClick(false);
+    }
+  }, [page]);
+
   const DivisionPage = () => {
-    let postArray = [];
-    let startPage = (page - 1) * 9;
-    let endPagePostIndex = page * 9 - 1;
+    let postArray = []; //dummydata 배열
+    let startPage = (page - 1) * 9; //1페이지일때 0, 2페이지일때 9, 3페이지일때 18
+    let endPagePostIndex = page * 9 - 1; //1페이지일때 8, 2페이지일때 17, 3페이지일때 26
     for (let i = startPage; i <= endPagePostIndex; i++) {
       if (!DummyData[i]) {
         break;
@@ -46,6 +51,7 @@ const RewardConHistory = ({
       setPage(page + 1);
     }
   };
+
   return (
     <Container>
       <Table>
