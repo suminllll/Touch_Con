@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Title from '../../components/Title/Title';
 import { TtileInput } from '../../components/Input/Inputs';
 import styled from 'styled-components';
 import { Btn1 } from '../../components/button/buttons';
 import History from '../../components/History/History';
 import RewardConHistory from '../../components/History/RewardConHistory';
+import axios from 'axios';
+import { API, JSONAPI } from '../../config';
 
 const RewardCh = () => {
-  //생성내역
+  //생성내역페이지
+
+  const [inputText, setinputText] = useState('');
+  const handleInput = e => {
+    setinputText(e.target.value);
+  };
+
+  const [list, setList] = useState({});
+
+  const filteredList = () => {
+    axios
+      .get(JSONAPI)
+      .then(res => setList(res.data))
+      .catch(err => console.log(err));
+  };
+
+  useEffect(() => {
+    filteredList();
+  }, []);
+
+  const handleInputSearchResult = () => {
+    axios
+      .get(JSONAPI)
+      .then(res => setList(res.data))
+      .catch(err => console.log(err));
+  };
+
   return (
     <div
       style={{
@@ -21,6 +49,7 @@ const RewardCh = () => {
           marginLeft: 250,
         }}
       >
+        <button onClick={제목검색}>이거눌러봐</button>
         <div
           style={{
             display: 'flex',
@@ -29,9 +58,13 @@ const RewardCh = () => {
           }}
         >
           <div>
-            <TtileInput />
+            <TtileInput value={inputText} onChange={handleInput} />
           </div>
-          <Btn1 text="검색" style={{ marginLeft: 250, marginTop: 30 }} />
+          <Btn1
+            text="검색"
+            style={{ marginLeft: 250, marginTop: 30 }}
+            onClick={제목검색}
+          />
         </div>
         <Box>
           <RewardConHistory

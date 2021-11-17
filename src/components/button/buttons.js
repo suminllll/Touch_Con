@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 export const Btn1 = props => {
-  const { text, style } = props;
+  const { text, style, onClick } = props;
 
   return (
     <div>
@@ -17,6 +17,7 @@ export const Btn1 = props => {
           fontWeight: 800,
           ...style,
         }}
+        onClick={onClick}
       >
         {text}
       </Button>

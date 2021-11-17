@@ -1,4 +1,4 @@
-import React, { useImperativeHandle, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import AdminBtn from '../../components/AdminBtn/AdminBtn';
 import Title from '../../components/Title/Title';
@@ -10,10 +10,8 @@ import { API, JSONAPI } from '../../config';
 const NoticeRegister = () => {
   const [getNotice, setGetNotice] = useState('');
   const [getNoticeTitle, setGetNoticeTitle] = useState('');
-  const [idNumber, setIdNumber] = useState(22);
   const [dmData, setdmData] = useState(DummyData);
   const NewDmData = [...dmData];
-  const [dummy, setDummy] = useState([]);
 
   const noticeInputTitle = e => {
     setGetNoticeTitle(e.target.value);
@@ -26,11 +24,10 @@ const NoticeRegister = () => {
       alert('제목을 입력하세요');
     }
   };
-  //id 값이 22부터 차례대로 등록되도록 한다.
 
   const handleAdd = () => {
     if (getNotice.length > 4) {
-      NewDmData.unshift({ id: 22, title: getNotice });
+      NewDmData.unshift({ title: getNotice });
       setdmData(NewDmData);
       alert('공지사항이 등록되었습니다.');
     } else {
@@ -41,28 +38,17 @@ const NoticeRegister = () => {
   const addNotice = () => {
     axios
       .post(JSONAPI, {
-        id: 22,
-        title: { getNoticeTitle },
-        contents: { getNotice },
+        //config.js 파일로 등록해놓은 데이터
+        title: { getNoticeTitle }, //공지사항의 제목
+        contents: { getNotice }, // 공지사항의 내용
       })
-      .then(res => setDummy(res.data.result))
+      .then(res => console.log(res.data))
       .catch(err => console.log(err));
   };
 
   useEffect(() => {
     addNotice();
   }, [getNotice]);
-
-  // const axiosTest2 = () => {
-  //   axios
-  //     .get(API)
-  //     .then(res => console.log(res.data))
-  //     .catch(err => console.log(err));
-  // };
-
-  // useEffect(() => {
-  //   axiosTest2();
-  // }, []);
 
   return (
     <>
