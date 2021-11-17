@@ -49,7 +49,6 @@ const RewardCh = () => {
           marginLeft: 250,
         }}
       >
-        <button onClick={제목검색}>이거눌러봐</button>
         <div
           style={{
             display: 'flex',
@@ -60,11 +59,7 @@ const RewardCh = () => {
           <div>
             <TtileInput value={inputText} onChange={handleInput} />
           </div>
-          <Btn1
-            text="검색"
-            style={{ marginLeft: 250, marginTop: 30 }}
-            onClick={제목검색}
-          />
+          <Btn1 text="검색" style={{ marginLeft: 250, marginTop: 30 }} />
         </div>
         <Box>
           <RewardConHistory
