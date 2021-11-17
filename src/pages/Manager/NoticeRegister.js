@@ -5,6 +5,7 @@ import Title from '../../components/Title/Title';
 import { Link } from 'react-router-dom';
 import DummyData from '../../components/pagination/boardData';
 import axios from 'axios';
+import { API, JSONAPI } from '../../config';
 
 const NoticeRegister = () => {
   const [getNotice, setGetNotice] = useState('');
@@ -14,31 +15,12 @@ const NoticeRegister = () => {
   const NewDmData = [...dmData];
   const [dummy, setDummy] = useState([]);
 
-  useEffect(() => {
-    axiosTest();
-    axiosTest2();
-  }, [getNotice]);
-
-  const axiosTest = () => {
-    axios
-      .post('https://jsonplaceholder.typicode.com/users', {
-        id: 1,
-        name: 'hoyoung',
-      })
-      .then(res => setDummy(res.data.result))
-      .catch(err => console.log(err));
-  };
-
-  const countIdNumber = () => {
-    setIdNumber(idNumber + 1);
-  };
-
   const noticeInputTitle = e => {
     setGetNoticeTitle(e.target.value);
   };
 
   const noticeInput = e => {
-    if (getNoticeTitle.length > 3) {
+    if (getNoticeTitle.length > 1) {
       setGetNotice(e.target.value);
     } else {
       alert('제목을 입력하세요');
@@ -55,7 +37,32 @@ const NoticeRegister = () => {
       alert('4글자 이상 작성해 주세요.');
     }
   };
-  // console.log('new=>', NewDmData);
+
+  const addNotice = () => {
+    axios
+      .post(JSONAPI, {
+        id: 22,
+        title: { getNoticeTitle },
+        contents: { getNotice },
+      })
+      .then(res => setDummy(res.data.result))
+      .catch(err => console.log(err));
+  };
+
+  useEffect(() => {
+    addNotice();
+  }, [getNotice]);
+
+  // const axiosTest2 = () => {
+  //   axios
+  //     .get(API)
+  //     .then(res => console.log(res.data))
+  //     .catch(err => console.log(err));
+  // };
+
+  // useEffect(() => {
+  //   axiosTest2();
+  // }, []);
 
   return (
     <>
@@ -88,7 +95,12 @@ const NoticeRegister = () => {
           </LinkStyle>
           {/* <LinkStyle to="/Notice"> */}
           <ButtonBox>
-            <AdminBtn handleBtn={handleAdd} color="#fd7f36" btnName="등록" />
+            <AdminBtn
+              handleBtn={handleAdd}
+              color="#fd7f36"
+              btnName="등록"
+              onClick={addNotice}
+            />
           </ButtonBox>
           {/* </LinkStyle> */}
         </ButtonWrap>

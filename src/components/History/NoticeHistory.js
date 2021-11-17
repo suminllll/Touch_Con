@@ -20,6 +20,7 @@ const History = ({
   const [totalPage, setTotalPage] = useState(
     parseInt(posts?.length / maxPostCount) + 1
   ); // 전체 페이지 수
+
   useEffect(() => {
     DivisionPage();
   }, [page]);
