@@ -5,8 +5,8 @@ const GlobalStyle = createGlobalStyle`
   ${reset}
 
 	*, html {
+    font-family: 'Work Sans', sans-serif;
     box-sizing: border-box;
-    font-family: sans-serif;
     font-weight: 400;
     font-size: 14px;
     letter-spacing: -0.03em;
