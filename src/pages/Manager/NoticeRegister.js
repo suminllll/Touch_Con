@@ -1,48 +1,55 @@
-import React, { useImperativeHandle, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import AdminBtn from '../../components/AdminBtn/AdminBtn';
 import Title from '../../components/Title/Title';
 import { Link } from 'react-router-dom';
 import DummyData from '../../components/pagination/boardData';
+import axios from 'axios';
+import { API, JSONAPI } from '../../config';
 
 const NoticeRegister = () => {
   const [getNotice, setGetNotice] = useState('');
   const [getNoticeTitle, setGetNoticeTitle] = useState('');
-  const [idNumber, setIdNumber] = useState(22);
   const [dmData, setdmData] = useState(DummyData);
   const NewDmData = [...dmData];
-
-  const countIdNumber = () => {
-    setIdNumber(idNumber + 1);
-  };
-
-  // console.log(countIdNumber());
-  // console.log('nnnnnnnnn', DummyData[1].id.length);
-  // console.log('asdfasdf', NewDmData);
 
   const noticeInputTitle = e => {
     setGetNoticeTitle(e.target.value);
   };
 
   const noticeInput = e => {
-    if (getNoticeTitle.length > 3) {
+    if (getNoticeTitle.length > 1) {
       setGetNotice(e.target.value);
     } else {
       alert('제목을 입력하세요');
     }
   };
-  //id 값이 22부터 차례대로 등록되도록 한다.
 
   const handleAdd = () => {
     if (getNotice.length > 4) {
-      NewDmData.unshift({ id: 22, title: getNotice });
+      NewDmData.unshift({ title: getNotice });
       setdmData(NewDmData);
       alert('공지사항이 등록되었습니다.');
     } else {
       alert('4글자 이상 작성해 주세요.');
     }
   };
-  console.log('new=>', NewDmData);
+
+  const addNotice = () => {
+    axios
+      .post(JSONAPI, {
+        //config.js 파일로 등록해놓은 데이터
+        title: { getNoticeTitle }, //공지사항의 제목
+        contents: { getNotice }, // 공지사항의 내용
+      })
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err));
+  };
+
+  useEffect(() => {
+    addNotice();
+  }, [getNotice]);
+
   return (
     <>
       <Title
@@ -74,7 +81,12 @@ const NoticeRegister = () => {
           </LinkStyle>
           {/* <LinkStyle to="/Notice"> */}
           <ButtonBox>
-            <AdminBtn handleBtn={handleAdd} color="#fd7f36" btnName="등록" />
+            <AdminBtn
+              handleBtn={handleAdd}
+              color="#fd7f36"
+              btnName="등록"
+              onClick={addNotice}
+            />
           </ButtonBox>
           {/* </LinkStyle> */}
         </ButtonWrap>

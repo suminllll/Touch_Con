@@ -2,6 +2,7 @@ import { useState } from 'react';
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react/cjs/react.development';
 
 const Menu = props => {
   const [isOpen, setIsOpen] = useState({

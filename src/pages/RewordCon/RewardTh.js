@@ -6,6 +6,10 @@ import RewardConHistory from '../../components/History/RewardConHistory';
 import styled from 'styled-components';
 
 const RewardTh = () => {
+  const 이름검색 = () => {
+    console.log('이름검색');
+  };
+
   //전송내역
   return (
     <div
@@ -31,7 +35,11 @@ const RewardTh = () => {
           <div>
             <TtileInput />
           </div>
-          <Btn1 text="검색" style={{ marginLeft: 250, marginTop: 30 }} />
+          <Btn1
+            onClick={이름검색}
+            text="검색"
+            style={{ marginLeft: 250, marginTop: 30 }}
+          />
         </div>
       </div>
       <Box>
