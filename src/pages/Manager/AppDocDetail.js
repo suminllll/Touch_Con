@@ -68,6 +68,7 @@ const AppDocDetail = () => {
 
         <AddHistory
           AllClick={allClick}
+          SetAllClick={setAllClick}
           Check="Check"
           style={{ marginLeft: 170 }}
         />

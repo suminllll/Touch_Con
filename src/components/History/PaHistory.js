@@ -5,7 +5,7 @@ import BOARD_DATA from './HistoryList/boardData';
 import DummyData from '../pagination/boardData';
 import Pagination from '../pagination';
 
-const PaHistory = ({ Check, style, AllClick }) => {
+const PaHistory = ({ Check, style, AllClick, SetAllClick }) => {
   const maxPostCount = 7;
   const [posts, setPosts] = useState(DummyData);
   const [page, setPage] = useState(1); // 현재 페이지
@@ -14,6 +14,12 @@ const PaHistory = ({ Check, style, AllClick }) => {
   ); // 전체  페이지  수수
   useEffect(() => {
     DivisionPage();
+  }, [page]);
+
+  useEffect(() => {
+    if (AllClick) {
+      SetAllClick(false);
+    }
   }, [page]);
 
   const DivisionPage = () => {

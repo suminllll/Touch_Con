@@ -55,7 +55,11 @@ const PointAllocation = () => {
             <BtnOrange2 text="삭제" />
           </div>
         </div>
-        <PaHistory Check="Check" AllClick={allClick} />
+        <PaHistory
+          Check="Check"
+          AllClick={allClick}
+          SetAllClick={setAllClick}
+        />
       </div>
     </>
   );
