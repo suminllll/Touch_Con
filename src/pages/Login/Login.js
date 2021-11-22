@@ -1,15 +1,38 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Radio from '../../components/Radio/Radio';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import api from '../../api/api';
+import axios from 'axios';
 
 const Login = () => {
-  const [inputStatus, setInputStatus] = useState(false);
+  const history = useHistory();
+  const [inputStatus, setInputStatus] = useState(true);
+  //false = 관리자 / true /  기업 변수 명을 통한 구분을 정확히 해주세요 ex) isEnterprise
+  const [password, setPassword] = useState('');
+  const [id, setId] = useState('');
 
-  const handleClickAdmin = () => {
+  const handleClickAdmin = e => {
     setInputStatus(!inputStatus);
   };
-
+  const onClickLogin = async () => {
+    let body = {
+      Id: id,
+      Pass: password,
+      Type: inputStatus ? 'company' : 'admin',
+    };
+    try {
+      const config = {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      };
+      const res = await api.post('pinchange', JSON.stringify(body), config);
+    } catch (err) {
+      alert('서버와 통신에 실패');
+      console.log('err', err);
+    }
+  };
   return (
     <Form>
       <Article>
@@ -32,13 +55,16 @@ const Login = () => {
             <div>비밀번호</div>
           </IdTextBox>
           <InputWrap>
-            <LoginInputBox />
-            <LoginInputBox />
+            <LoginInputBox onChange={e => setId(e.target.value)} />
+            <LoginInputBox
+              type="password"
+              onChange={e => setPassword(e.target.value)}
+            />
             <LinkStyle to="/signUp">
               <ChangeBox>기업회원가입</ChangeBox>
             </LinkStyle>
           </InputWrap>
-          <LoginButton>로그인</LoginButton>
+          <LoginButton onClick={onClickLogin}>로그인</LoginButton>
         </LoginWrapper>
       </Article>
     </Form>

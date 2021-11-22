@@ -4,11 +4,16 @@ import styled from 'styled-components';
 import Title from '../../components/Title/Title';
 import Radio from '../../components/Radio/Radio';
 import { Link } from 'react-router-dom';
+import api from '../../api/api';
 
 const RewardPublish = () => {
   const [inputStatus, setInputStatus] = useState('');
   const [save, setSave] = useState('');
-
+  const [title, setTitle] = useState('');
+  const [distribution, setDistribution] = useState('');
+  const [createTC, setCreateTC] = useState('');
+  const [memo, setMemo] = useState('');
+  const [file, setFile] = useState('');
   const handleClickButton = buttonName => {
     setInputStatus(buttonName);
   };
@@ -18,6 +23,20 @@ const RewardPublish = () => {
     setSave(save);
   };
 
+  const onClickSubmit = () => {
+    if (
+      title.length === 0 ||
+      distribution.length === 0 ||
+      createTC.length === 0 ||
+      memo.length === 0 ||
+      file.length === 0
+    ) {
+      alert('빈칸없이 작성바랍니다');
+      return;
+    }
+
+    let body = {};
+  };
   return (
     <>
       <Title
@@ -28,7 +47,11 @@ const RewardPublish = () => {
         <Section>
           <Ul>
             <TitleBox>제목</TitleBox>
-            <TitleInputBox />
+            <TitleInputBox
+              onChange={e => {
+                setTitle(e.target.value);
+              }}
+            />
           </Ul>
           <Ul>
             <MiddleWrap>
@@ -42,6 +65,9 @@ const RewardPublish = () => {
             <InputPlaceholder
               type="number"
               placeholder="숫자만 입력 해주세요."
+              onChange={e => {
+                setDistribution(e.target.value);
+              }}
             />
           </Ul>
           <Ul>
@@ -49,6 +75,9 @@ const RewardPublish = () => {
             <InputPlaceholder
               type="number"
               placeholder="숫자만 입력 해주세요."
+              onChange={e => {
+                setCreateTC(e.target.value);
+              }}
             />
           </Ul>
           <Ul>
@@ -86,16 +115,19 @@ const RewardPublish = () => {
           </Ul>
           <Ul>
             <TitleBox>안내 메모</TitleBox>
-            <LastInputBox />
+            <LastInputBox
+              onChange={e => {
+                setMemo(e.target.value);
+              }}
+            />
           </Ul>
         </Section>
         <RightWrapper>
           <QrBox>
             <Qr alt="qr" src="/images/Qr.png" />
           </QrBox>
-          <LinkStyle to="/">
-            <PublishButton>발행하기</PublishButton>
-          </LinkStyle>
+
+          <PublishButton onClick={onClickSubmit}>발행하기</PublishButton>
         </RightWrapper>
       </Main>
     </>

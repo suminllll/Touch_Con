@@ -21,7 +21,7 @@ export const TtileInput = ({ value, onChange }) => {
         onChange={onChange}
         value={value}
       />
-      {console.log(value)}
+      {/*{console.log(value)}*/}
     </div>
   );
 };

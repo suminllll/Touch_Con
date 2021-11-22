@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SignupInput = ({ name, placeHolder }) => {
+const SignupInput = ({ name, placeHolder, onChange, type }) => {
   return (
     <InputGroup>
       <P>{name}</P>
-      <Input placeholder={placeHolder} />
+      <Input placeholder={placeHolder} onChange={onChange} type={type} />
     </InputGroup>
   );
 };
