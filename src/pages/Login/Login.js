@@ -4,9 +4,13 @@ import Radio from '../../components/Radio/Radio';
 import { Link, useHistory } from 'react-router-dom';
 import api from '../../api/api';
 import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { LOGIN } from '../../Redux/userSlice';
 
 const Login = () => {
   const history = useHistory();
+  const dispatch = useDispatch();
+  const { user, isLogin } = useSelector(state => state.auth);
   const [inputStatus, setInputStatus] = useState(true);
   //false = 관리자 / true /  기업 변수 명을 통한 구분을 정확히 해주세요 ex) isEnterprise
   const [password, setPassword] = useState('');
@@ -15,7 +19,8 @@ const Login = () => {
   const handleClickAdmin = e => {
     setInputStatus(!inputStatus);
   };
-  const onClickLogin = async () => {
+  const onClickLogin = async e => {
+    e.preventDefault();
     let body = {
       Id: id,
       Pass: password,
@@ -27,7 +32,9 @@ const Login = () => {
           'Content-Type': 'application/json',
         },
       };
-      const res = await api.post('pinchange', JSON.stringify(body), config);
+      const res = await api.post('login', JSON.stringify(body), config);
+      dispatch(LOGIN(res?.data));
+      history.push('/');
     } catch (err) {
       alert('서버와 통신에 실패');
       console.log('err', err);

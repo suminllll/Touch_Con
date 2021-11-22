@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { LOGOUT } from '../../Redux/userSlice';
 
 const Nav = () => {
   const [login, setLogin] = useState(false);
-
+  const auth = useSelector(state => state.auth);
+  const dispatch = useDispatch();
+  const history = useHistory();
   const changLog = e => {
-    setLogin(!login);
+    if (auth.isLogin) {
+      dispatch(LOGOUT());
+      alert('로그아웃 성공');
+    } else {
+      history.push('login');
+    }
   };
   return (
     <Top>
@@ -19,14 +28,10 @@ const Nav = () => {
       <OverWrapRight>
         <Text>
           <LogoutImg alt="logoutImg" src="/images/Vector.png" />
-          <LinkStyle to="/Login">
-            <LoginButton onClick={changLog} changeLogin={login}>
-              로그인
-            </LoginButton>
-          </LinkStyle>
-          <LogoutButton onClick={changLog} changeLogin={login}>
-            로그아웃
-          </LogoutButton>
+
+          <LoginButton onClick={changLog}>
+            {auth.isLogin ? '로그아웃' : '로그인'}
+          </LoginButton>
         </Text>
         <Rectangle_9 />
         <Rectangle_8 />
